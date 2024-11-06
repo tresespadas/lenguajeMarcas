@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Práctica de examen</title>
+</head>
+
+<body>
+<h2>Recorra nuestro sitio web</h2>
+<ul>
+    <li>
+    <a href="http://127.0.0.1:5500/Ejercicio%20tipo%20examen%20N%C2%BA%204-20241102/tipo_Examen_HTML/prueba-04/HTML-apellidos_nombre/index.html">Página inicial</a>
+    </li>
+    <li>
+    <a href="http://127.0.0.1:5500/Ejercicio%20tipo%20examen%20N%C2%BA%204-20241102/tipo_Examen_HTML/prueba-04/HTML-apellidos_nombre/bd/sql/recogeDatos.html">Recogida de datos</a>
+    </li>
+    <li>
+    <a href="http://127.0.0.1:5500/Ejercicio%20tipo%20examen%20N%C2%BA%204-20241102/tipo_Examen_HTML/prueba-04/HTML-apellidos_nombre/bd/resultados.html">Tabla de resultados</a>
+    </li>
+    <li>
+    <a href="http://127.0.0.1:5500/Ejercicio%20tipo%20examen%20N%C2%BA%204-20241102/tipo_Examen_HTML/prueba-04/HTML-apellidos_nombre/blog/blog.html">Nuestro blog</a>
+    </li>
+</ul>
+
+<h1>Blog</h1>
+<p>Hablaremos de dos grandes temas: HTML y CSS</p>
+<h2>Indice del blog</h2>
+<ul> <!-- FIX LINKS-->
+    <li>
+        <a href="http://127.0.0.1:5500/Ejercicio%20tipo%20examen%20N%C2%BA%204-20241102/tipo_Examen_HTML/prueba-04/HTML-apellidos_nombre/blog/blog.html#bloque_html">Bloque HTML</a>
+        <ul>
+            <li>
+                <a href="http://127.0.0.1:5500/Ejercicio%20tipo%20examen%20N%C2%BA%204-20241102/tipo_Examen_HTML/prueba-04/HTML-apellidos_nombre/blog/blog.html#cerrar_etiquetas">Cerrar etiquetas</a>
+            </li>
+            <li>
+                <a href="http://127.0.0.1:5500/Ejercicio%20tipo%20examen%20N%C2%BA%204-20241102/tipo_Examen_HTML/prueba-04/HTML-apellidos_nombre/blog/blog.html#evitar_estilos">Evitar estilos inline</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="http://127.0.0.1:5500/Ejercicio%20tipo%20examen%20N%C2%BA%204-20241102/tipo_Examen_HTML/prueba-04/HTML-apellidos_nombre/blog/blog.html#bloque_css">Bloque CSS</a>
+        <ul>
+            <li>
+                <a href="http://127.0.0.1:5500/Ejercicio%20tipo%20examen%20N%C2%BA%204-20241102/tipo_Examen_HTML/prueba-04/HTML-apellidos_nombre/blog/blog.html#jerarquia">Jerarquía</a>
+            </li>
+            <li>
+                <a href="http://127.0.0.1:5500/Ejercicio%20tipo%20examen%20N%C2%BA%204-20241102/tipo_Examen_HTML/prueba-04/HTML-apellidos_nombre/blog/blog.html#fuentes">Fuentes</a>
+                <ul>
+                    <li>
+                        <a href="http://127.0.0.1:5500/Ejercicio%20tipo%20examen%20N%C2%BA%204-20241102/tipo_Examen_HTML/prueba-04/HTML-apellidos_nombre/blog/blog.html#text_shadow">Text Shadow</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+<h2 id="bloque_html">Bloque HTML</h2>
+<h3 id="cerrar_etiquetas">Artículo 1: Cerrar las etiquetas</h3>
+Back in the day, it wasn't uncommon to see things like this:
+
+<pre>
+            &lt;li&gt;Some text here.
+            &lt;li&gt;Some new text here.
+            &lt;li&gt;You get the idea.
+</pre>          
+
+Notice how the wrapping UL/OL tag was omitted. Additionally, many chose to leave off the closing LI tags as well. By today's standards, this is simply bad practice and should be 100% avoided. Always, always close your tags. Otherwise, you'll encounter validation and glitch issues at every turn.
+<h3 id="evitar_estilos">Artículo 2: Never Use Inline Styles</h3>
+When you're hard at work on your markup, sometimes it can be tempting to take the easy route and sneak in a bit of styling. 1
+
+<pre>
+    &lt;p style=&quot;color: red;&quot;&gt;I'm going to make this text red so that it really stands out and makes people take notice! &lt;/p&gt;
+</pre>
+
+Sure -- it looks harmless enough. However, this points to an error in your coding practices.
+
+<h2 id="bloque_css">Bloque CSS</h2>
+<h3 id="jerarquia">Artículo 1: Hierarchy provides a visual order to content</h3>
+<p>Hierarchy is something you really only notice when it’s not there. In typography, hierarchy refers to the visual difference between various pieces of text. It’s the distinction between headings, paragraphs, links, and other text styles.</p>
+<p>This distinction is made by choosing different fonts, colors, size, capitalization, and other properties for each type of text content. Good hierarchy makes complex information easier to digest and guides users through your content.</p>
+<!-- Imagen -->
+<div>
+    <img src="http://127.0.0.1:5500/Ejercicio%20tipo%20examen%20N%C2%BA%204-20241102/tipo_Examen_HTML/prueba-04/HTML-apellidos_nombre/figuras/typography_hiearchy-1_vab7fy.jpg" />
+</div>
+<p>Left: Poor hierarchy. There’s not much differentiation in the size or color of the text to help users digest the content. Right: Better hierarchy that uses more variety in font size, color, and spacing to help users quickly navigate the content.</p>
+
+<h3 id="fuentes">Artículo 2: choosing fonts</h3>
+<p>With typography, we need to make sure it is as easy to read as possible. The greatest overall factor in readability is the font you choose—which is a huge topic. There are many factors that determine how "readable" a font is. Some fonts are made specifically to be used as headings or short lines of text; these are called "display" fonts, and they often have more personality than fonts designed to be used for text. Unique flourishes and quirks make display fonts harder to read at small sizes and when part of a large paragraph. As a rule of thumb, use a more straightforward font for text and only use display fonts for headings.</p>
+<!-- Imagen -->
+<p>If you’re in a pinch and need a readable font, try Google Fonts. Add a paragraph of text to the preview field and size it roughly how it will display on your website. You can then narrow down your results to serif or sans-serif and scan the list of fonts for one that is easy to read. Roboto, Noto Sans, Merriweather, and PT Serif are all very readable options.</p>
+<div>
+    <img src="http://127.0.0.1:5500/Ejercicio%20tipo%20examen%20N%C2%BA%204-20241102/tipo_Examen_HTML/prueba-04/HTML-apellidos_nombre/figuras/googlefonts.gif" />
+</div>
+<h4 id="text_shadow">Text Shadow</h4>
+<p>
+Este código define dos sombras (text shadow) para elementos p. El número de sombras puede ampliarse según se desee; no olvides poner siempre una coma para separar las cifras.
+</p>
+
+<p>
+Los dos primeros elementos determinan la posición de la sombra (primero la coordenada para X y luego para Y). La tercera cifra define el tamaño. Por último se especifica el color de la sombra, ya sea por indicación RGBA (300, 180, 100, 1) como en la primera línea, o por indicación absoluta como en la segunda línea (red). Una vez aplicado el anterior comando CSS, el texto se verá de la siguiente forma:
+</p>
+<!-- Imagen -->
+<div>
+    <img src="http://127.0.0.1:5500/Ejercicio%20tipo%20examen%20N%C2%BA%204-20241102/tipo_Examen_HTML/prueba-04/HTML-apellidos_nombre/figuras/css-text-shadow.png" />
+</div>
+</body>
+</html>
