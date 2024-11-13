@@ -11,8 +11,8 @@
     <h1>Ejemplo de formulario</h1>
     <p>Vamos a ver un primer ejemplo de formulario</p>
 
-    <form action="/procesa.php" method="post" enctype="multipart/form-data">
-        <p>Indica tus ciudades favoritas:</p>        
+    <form action="/procesa.php" method="post" enctype="multipart/form-data"> <!-- Esta opción para subir un fichero -->
+        <p>Indica tus ciudades favoritas:</p>
         <label>
             <input type="checkbox" name="city" id="jerez">Jerez
         </label> <br>
@@ -46,12 +46,13 @@
             <label for="modulo3">Base de Datos</label> -->
         <p>
             <label for="usuario">Nombre: </label> <br>
-            <input type="text" name="usuario" id="usuario" placeholder="usuario por defecto"> 
+            <input type="text" name="usuario" id="usuario" placeholder="usuario por defecto">
         </p>
 
         <p>
             <label for="clave">Contraseña: </label> <br>
-            <input type="password" name="clave" id="clave" required minlength="8" maxlength="12"> <!-- Atributo name obligatorio -->
+            <input type="password" name="clave" id="clave" required minlength="8" maxlength="12">
+            <!-- Atributo name obligatorio -->
         </p>
 
         <p>
@@ -63,22 +64,22 @@
 
         <p>
             <label for="reclama">Reclamación: </label> <br>
-            <textarea  name="reclama" id="reclama" cols="50" row="50"></textarea>
+            <textarea name="reclama" id="reclama" cols="50" row="50"></textarea>
         </p>
 
         <p>
             <label>Correo: <br>
-            <input type="email" name="correo" id="correo"></label>
+                <input type="email" name="correo" id="correo"></label>
         </p>
-        
+
         <p>
             <label>Fecha de compra: <br>
-            <input type="date" name="fechaCompra" id="fechaCompra"></label>
+                <input type="date" name="fechaCompra" id="fechaCompra"></label>
         </p>
 
         <p>
             <label>Adjunte su factura: <br>
-            <input type="file" name="factura"></label>
+                <input type="file" name="factura"></label>
         </p>
 
         <br>
