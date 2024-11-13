@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cap 08: formularios</title>
+</head>
+
+<body>
+    <h1>Ejemplo de formulario</h1>
+    <p>Vamos a ver un primer ejemplo de formulario</p>
+
+    <form action="/procesa.php" method="get">
+        <!-- HAY DOS MÉTODOS: INPUT DENTRO DE LAB Y INPUT FUERA PERO CON EL for -->
+        <label>
+            <input type="radio" name="modulo" id="LMSGI">Lenguaje de Marcas
+        </label> <br>
+        <label>
+            <input type="radio" name="modulo" id="BBDD">Bases de Datos
+        </label> <br>
+        <label>
+            <input type="radio" name="modulo" id="PAR">Redes
+        </label> <br>
+        <!-- <p>
+            <input type="radio" name="modulo" id="modulo1" value="LMGSI"> 
+            <label for="modulo1">Lenguaje de Marcas</label>
+        <p>
+        <p>
+            <input type="radio" name="modulo" id="modulo2" value="PAR"> 
+            <label for="modulo2">Redes</label>
+        <p>
+        <p>
+            <input type="radio" name="modulo" id="modulo3" value="BBDD"> 
+            <label for="modulo3">Base de Datos</label> -->
+        <p>
+            <label for="usuario">Nombre: </label> <br>
+            <input type="text" name="usuario" id="usuario"> 
+        </p>
+
+        <p>
+            <label for="clave">Contraseña: </label> <br>
+            <input type="password" name="clave" id="clave"> <!-- Atributo name obligatorio -->
+        </p>
+
+        <br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpiar">
+    </form>
+
+</body>
+
+</html>
