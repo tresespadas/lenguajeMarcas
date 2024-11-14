@@ -27,7 +27,45 @@
     </nav>
 
     <h1>Formulario de recogida de datos</h1>
-
+    <form action="/altas.php" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Datos de la compra</legend>
+            <p>Seleccione la marca:</p>
+            <label>
+                <input type="radio" name="marca" id="marca">Marca a
+            </label>
+            <label>
+                <input type="radio" name="marca" id="marca">Marca b
+            </label>
+            <label>
+                <input type="radio" name="marca" id="marca">Marca c
+            </label>
+            <label>
+                <input type="radio" name="marca" id="marca">Marca d
+            </label>
+            <p>
+                <label for="num">Nºde unidades</label>
+                <input type="number" name="num" id="num">
+            </p>
+            Adjuntar 2 ficheros: factura de compra y fotocopia de DNI
+            <p> <!-- Duda -->
+                <label for="form"></label>
+                <input type="file" name="form" id="form" min="2" max="2">
+            </p>
+            <p><label>Fecha Compra<input type="date" name="fechaCompra"></label></p>
+        </fieldset>
+        <fieldset>
+            <legend>Datos personales</legend>
+            <p><label>Usuario <input type="email" name="userEmail" id="userEmail" placeholder="Correo electrónico"></label></p>
+            <p><label>Código de validación <input type="text" name="codValid" id="codValid" required></label> * Campo
+                obligatorio. Formato: 2 mayúsculas, un guión, y entre 2 y 5 caracteres que pueden ser indistintamente
+                minúsculas o dígitos. Por jemplo, AB-123, o ZA-ab12z</p> <!-- Arreglar formato -->
+        </fieldset>
+        <p>
+            <label><input type="submit" value="Enviar"></label>
+            <label><input type="reset" value="Limpiar"></label>
+        </p>
+    </form>
 </body>
 
 </html>
