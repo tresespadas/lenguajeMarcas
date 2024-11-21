@@ -32,23 +32,23 @@
             <legend>Datos de la compra</legend>
             <p>Seleccione la marca:</p>
             <label>
-                <input type="radio" name="marca" id="marca">Marca a
+                <input type="radio" name="marca" id="marca" value="A">Marca a
             </label>
             <label>
-                <input type="radio" name="marca" id="marca">Marca b
+                <input type="radio" name="marca" id="marca" value="B">Marca b
             </label>
             <label>
-                <input type="radio" name="marca" id="marca">Marca c
+                <input type="radio" name="marca" id="marca" value="C">Marca c
             </label>
             <label>
-                <input type="radio" name="marca" id="marca">Marca d
+                <input type="radio" name="marca" id="marca" value="D">Marca d
             </label>
             <p>
                 <label for="num">Nºde unidades</label>
                 <input type="number" name="num" id="num">
             </p>
             Adjuntar 2 ficheros: factura de compra y fotocopia de DNI
-            <p> <!-- Duda -->
+            <p>
                 <label for="form"></label>
                 <input type="file" name="form" id="form" multiple>
             </p>
@@ -57,9 +57,9 @@
         <fieldset>
             <legend>Datos personales</legend>
             <p><label>Usuario <input type="email" name="userEmail" id="userEmail" placeholder="Correo electrónico"></label></p>
-            <p><label>Código de validación <input type="text" name="codValid" id="codValid" required></label> * Campo
+            <p><label>Código de validación <input type="text" name="codValid" id="codValid" required pattern="[A-Z]{2}-[0-9a-z]{2,5}"></label> * Campo
                 obligatorio. Formato: 2 mayúsculas, un guión, y entre 2 y 5 caracteres que pueden ser indistintamente
-                minúsculas o dígitos. Por jemplo, AB-123, o ZA-ab12z</p> <!-- Arreglar formato -->
+                minúsculas o dígitos. Por ejemplo, AB-123, o ZA-ab12z</p>
         </fieldset>
         <p>
             <label><input type="submit" value="Enviar"></label>
