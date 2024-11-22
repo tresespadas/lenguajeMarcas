@@ -1,42 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opina - Prueba 03</title>
+</head>
 
+<body style="background-color: beige;">
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio: index.html</a></li>
+            <li><a href="../proyectos/hosting/000vargas/blog.html">Blog</a></li>
+            <li><a href="../proyectos/proyectos.html">Proyectos: Tabla de ventas</a></li>
+            <li><a href="opina.html">Opina: Denos su opinión</a></li>
+        </ul>
+    </nav>
+    <h1>
+        opina.html
+    </h1>
+    Aquí va el formulario
 
-opina.html
+    <form action="/archivo.php" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Datos de usuario </legend>
+            Mail
+            <p>
+                <label>
+                    <input type="email" name="correo" id="correo">
+                </label>
+            </p>
+            Nacido el
+            <p><label><input type="date" name="fecha" id="fecha"></label></p>
+            <p><label><input type="checkbox" name="adulto" id="fecha">Marque si es mayor de edad</label></p>
 
-Aquí va el formulario
+            <label>
+                <input type="radio" name="socio" id="socio" value="socio">Socio
+            </label>
+            <label>
+                <input type="radio" name="socio" id="socio" value="no_socio">No Socio
+            </label>
+        </fieldset>
 
-Datos de usuario 
+        <fieldset>
+            <legend>
+                Datos opinión
+            </legend>
+            <p>Tu opinión</p>
+            <label><input type="text" name="opinion" id="opinion"></label>
 
-Mail
+            Número de Serie (3 mayúsculas, guión y dos dígitos)
 
-Nacido el
+            Factura Escaneada
 
-Marque si es mayor de edad
+            Indique el número de días transcurridos desde su primera consulta (mínimo 7, máximo 365)
+        </fieldset>
+        <p>
+            <label><input type="submit" value="Enviar"></label>
+            <label><input type="reset" value="Limpiar"></label>
+        </p>
+    </form>
+</body>
 
-Socio  No Socio 
-
-
-
-
-
-Datos opinión
-
-Tu opinión
-
-Número de Serie (3 mayúsculas, guión y dos dígitos)
-
-Factura Escaneada
-
-Indique el número de días transcurridos desde su primera consulta (mínimo 7, máximo 365)
-
-
-
-
-
-
-
-
-
-
-
-
+</html>
