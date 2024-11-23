@@ -21,21 +21,22 @@
     </h1>
     Aquí va el formulario
 
-    <form action="/archivo.php" method="post" enctype="multipart/form-data">
+    <form action="/procesa.php" method="post" enctype="multipart/form-data">
         <fieldset>
             <legend>Datos de usuario </legend>
             <p>
-            Mail <br>
+                Mail <br>
                 <label>
                     <input type="email" name="correo" id="correo">
                 </label>
             </p>
 
             <p>
-            Nacido el <br>
-            <label><input type="date" name="fecha" id="fecha"></label></p>
+                Nacido el <br>
+                <label><input type="date" name="fecha" id="fecha"></label>
+            </p>
 
-            <p><label><input type="checkbox" name="adulto" id="fecha">Marque si es mayor de edad</label></p>
+            <p><label><input type="checkbox" name="adulto" id="fecha" required>Marque si es mayor de edad</label></p>
 
             <label>
                 <input type="radio" name="socio" id="socio" value="socio">Socio
@@ -51,16 +52,23 @@
             </legend>
             <p>Tu opinión <br>
                 <label for="opinion"></label>
-                <textarea name="opinion" id="opinion" rows="7" cols="80"></textarea>
+                <textarea name="opinion" id="opinion" rows="5" cols="60"></textarea> <!-- Duda limitar 140 caracteres-->
             </p>
             <p>
-            Número de Serie <em>(3 mayúsculas, guión y dos dígitos)</em> <br>
-            <label><input type="text" name="num_serie" id="num_serie" placeholder="XXX-12" size="3" pattern="[A-Z]{3}[-][0-9]{2}"></label>
+                Número de Serie <em>(3 mayúsculas, guión y dos dígitos)</em> <br>
+                <label><input type="text" name="num_serie" id="num_serie" placeholder="XXX-12" size="3"
+                        pattern="[A-Z]{3}[-][0-9]{2}"></label>
             </p>
 
-            Factura Escaneada
+            <p>
+                Factura Escaneada <br>
+                <label><input type="file" name="archive" id="archivo"></label>
+            </p>
 
-            Indique el número de días transcurridos desde su primera consulta (mínimo 7, máximo 365)
+            <p>
+                Indique el número de días transcurridos desde su primera consulta (mínimo 7, máximo 365) <br>
+                <label><input type="number" name="dias_cita" id="dias_cita" step="1" min="7" max="365"></label>
+            </p>
         </fieldset>
         <p>
             <label><input type="submit" value="Enviar"></label>
