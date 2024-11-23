@@ -24,14 +24,17 @@
     <form action="/archivo.php" method="post" enctype="multipart/form-data">
         <fieldset>
             <legend>Datos de usuario </legend>
-            Mail
             <p>
+            Mail <br>
                 <label>
                     <input type="email" name="correo" id="correo">
                 </label>
             </p>
-            Nacido el
-            <p><label><input type="date" name="fecha" id="fecha"></label></p>
+
+            <p>
+            Nacido el <br>
+            <label><input type="date" name="fecha" id="fecha"></label></p>
+
             <p><label><input type="checkbox" name="adulto" id="fecha">Marque si es mayor de edad</label></p>
 
             <label>
@@ -46,10 +49,14 @@
             <legend>
                 Datos opinión
             </legend>
-            <p>Tu opinión</p>
-            <label><input type="text" name="opinion" id="opinion"></label>
-
-            Número de Serie (3 mayúsculas, guión y dos dígitos)
+            <p>Tu opinión <br>
+                <label for="opinion"></label>
+                <textarea name="opinion" id="opinion" rows="7" cols="80"></textarea>
+            </p>
+            <p>
+            Número de Serie <em>(3 mayúsculas, guión y dos dígitos)</em> <br>
+            <label><input type="text" name="num_serie" id="num_serie" placeholder="XXX-12" size="3" pattern="[A-Z]{3}[-][0-9]{2}"></label>
+            </p>
 
             Factura Escaneada
 
