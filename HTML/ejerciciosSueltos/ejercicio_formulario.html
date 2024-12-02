@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Formulario</title>
+</head>
+
+<body>
+    <h1>Formulario de Matriculación de Alumnos</h1>
+    <form action="/recurso.php" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Datos personales</legend>
+            <p>
+                <label>
+                    Nombre completo: <br>
+                    <input type="text" name="nombre_completo" placeholder="Ingrese el nombre completo" size="21">
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    Fecha de nacimiento: <br>
+                    <input type="date" name="fecha_nac"></label>
+            </p>
+
+            <p>
+                <label>
+                    Correo electrónico: <br>
+                    <input type="email" name="email" placeholder="Ingrese el correo electrónico" size="21"></label>
+            </p>
+
+            <p>
+                <label>
+                    Número de teléfono: <br>
+                    <input type="tel" name="telefono" placeholder="Ingrese el número de teléfono" size="21"></label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Género</legend>
+            <p>
+                <label for="genero"></label>
+                <input type="radio" name="genero" id="genero" value="masc">Masculino
+                <br><input type="radio" name="genero" id="genero" value="fem">Femenino
+                <br><input type="radio" name="genero" id="genero" value="otro">Otro
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Curso a matricularse</legend>
+            <p>
+                Seleccione el curso: <br>
+                <select name="curso" id="curso">
+                    <option disabled selected>Seleccione un curso</option>
+                    <option value="1">1º ASIR</option>
+                    <option value="2">2º ASIR</option>
+                    <option value="3">1º DAW</option>
+                    <option value="4">2º DAW</option>
+                </select>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Aficiones</legend>
+            <p>
+                <label for="aficiones"></label>
+                <input type="checkbox" name="aficiones" id="aficiones" value="deporte">Deporte <br>
+                <input type="checkbox" name="aficiones" id="aficiones" value="musica">Música <br>
+                <input type="checkbox" name="aficiones" id="aficiones" value="lectura">Lectura <br>
+                <input type="checkbox" name="aficiones" id="aficiones" value="arte">Arte <br>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Comentarios adicionales</legend>
+            <p>
+                Escriba sus comentarios: <br>
+                <textarea name="comentarios" id="comentarios"
+                    placeholder="Escriba aquí cualquier comentario adicional..." rows="7" cols="25"></textarea>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Finalizar</legend>
+            <label><input type="submit" value="Enviar"></label>
+            <label><input type="reset" value="Limpiar"></label>
+        </fieldset>
+    </form>
+</body>
+
+</html>
