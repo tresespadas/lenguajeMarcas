@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libreria>
+  <libro id="1">
+    <titulo>Don Quijote de la Mancha</titulo>
+    <autor>Miguel de Cervantes</autor>
+    <genero>Burlesque</genero>
+    <editorial> Francisco de Robles</editorial>
+    <personajes>
+      <personaje id="1">Sancho Panza<personaje>
+      <personaje id="2">Dulcinea del Toboso<personaje>
+      <personaje id="3">Rocinante<personaje>
+    </personajes>
+    <ISBN>999-9-99-999999-9
+</libreria>

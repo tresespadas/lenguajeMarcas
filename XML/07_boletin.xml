@@ -1,0 +1,33 @@
+<?xml version"1.0" encoding="UTF-8"?>
+<agenda>
+  <contacto nombre="Estefanía"> 
+    <emails>
+      <email id="1">
+        estefaniablabla@gmail.com
+      </email>
+    <emails>
+      <telefonos>
+        <telefono id="1">
+          956785563
+        </telefono>
+        <telefono id="2">
+          675556324
+        </telefono>
+      </telefonos>
+  </contacto>
+  <contacto nombre="Álvaro"> 
+    <emails>
+      <email id="1">
+        alvaroblabla@gmail.com
+      </email>
+    <emails>
+      <telefonos>
+        <telefono id="1">
+          9753434343
+        </telefono>
+        <telefono id="2">
+          657788890
+        </telefono>
+      </telefonos>
+  </contacto>
+</agenda>
