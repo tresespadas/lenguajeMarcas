@@ -1,0 +1,15 @@
+<?xml version="1.0" enconding="UTF-8"?>
+<bandeja-de-entrada>
+    <correo id="1" tipo="no-leido">
+      <remitente>pepe.luis@gmail.com</remitente>
+      <destinatario>juan.luis@gmail.com</destinatario>
+      <asunto>Hola, hermano</asunto>
+      <cuerpo>Te escribo para comentarte el tema de ...<cuerpo>
+    </correo>
+    <correo id="2" tipo="leido">
+      <remitente>dgt@españa.es</remitente>
+      <destinatario>juan.luis@gmail.com</destinatario>
+      <asunto>[MULTA DE TRÁFICO] MATRICULA 8880 LMZ</asunto>
+      <cuerpo>Este es un mensaje automático para comunicarle la MULTA correspondiente al vehículo...<cuerpo>
+    </correo>
+</bandeja-de-entrada>

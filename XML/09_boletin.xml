@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<base-datos>
+  <empleado id="1968">
+    <apellido>Burgos</apellido>
+    <nombre>Jeronimo</nombre>
+    <seccional>Palmira</seccional>
+    <facultad>Administración</facultad>
+    <cargo>Administrativo</cargo>
+    <salario>32000,00</salario>
+    <fch_comienzo>05/04/1982</fch_comienzo>
+    <fch_nacimiento>28/09/1951</fch_nacimiento>
+  </empleado>
+  <empleado id="1674">
+    <apellido>Villegas</apellido>
+    <nombre>Estefania</nombre>
+    <seccional>Palmira</seccional>
+    <facultad>Administración</facultad>
+    <cargo>Docente</cargo>
+    <salario>32000,00</salario>
+    <fch_comienzo>25/03/1992</fch_comienzo>
+    <fch_nacimiento>17/01/1964</fch_nacimiento>
+  </empleado>
+  <empleado id="1516">
+    <apellido>Fernandez</apellido>
+    <nombre>Guillermo</nombre>
+    <seccional>Palmira</seccional>
+    <facultad>Administración</facultad>
+    <cargo>Docente</cargo>
+    <salario>45000,00</salario>
+    <fch_comienzo>06/03/1985</fch_comienzo>
+    <fch_nacimiento>26/06/1963</fch_nacimiento>
+  </empleado>
+</base-datos>
