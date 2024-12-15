@@ -1,0 +1,12 @@
+<alumnos>
+  <alumno telefono="666555444" residendia="Jerez">
+    <id>
+      <DNI>32056794J</DNI>
+    </id>
+    <nombre>Pepe</nombre>
+    <apellidos>Pérez</apellidos>
+    <apellidos>Benítez</apellidos>
+    <direccion>Béquer S/N</direccion>
+    <modulos>Lenguaje de Marcas</modulos>
+  </alumno>
+</alumnos>
