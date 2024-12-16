@@ -1,5 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE alumnos [
+<!ELEMENT alumnos (alumno+)>
+<!ELEMENT alumno (id, nombre, apellidos+, direccion, modulos)>
+<!ELEMENT id (DNI)>
+<!ELEMENT DNI (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT modulos (#PCDATA)>
+  <!ATTLIST alumno telefono CDATA #REQUIRED>
+  <!ATTLIST alumno residencia CDATA #REQUIRED>
+]>
+
 <alumnos>
-  <alumno telefono="666555444" residendia="Jerez">
+  <alumno telefono="666555444" residencia="Jerez">
     <id>
       <DNI>32056794J</DNI>
     </id>

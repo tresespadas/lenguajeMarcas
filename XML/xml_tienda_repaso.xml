@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<almacen>
+  <producto id="1" marca="marca1" descuento="no">
+    <nombre>cosa</nombre>
+    <tipo>brillante</tipo>
+    <precio>1</precio> 
+    <stock>100</stock>
+  </producto>
+  <producto id="2" descuento="si">
+    <nombre>cosa2</nombre>
+    <tipo>ropa</tipo>
+    <talla>mediana</talla>
+    <color>azul</color>
+    <precio>2</precio> 
+    <stock>200</stock>
+  </producto>
+  <cliente id="1" miembro="premium">
+    <nombre>Paco</nombre>
+    <contacto>
+      <email>paco.porras@gmail.com</email> <!-- Duda porque #PCDATA en el campo email -->
+      <telefono>9239439242</telefono>
+    </contacto>
+    <compra productRef="1">
+      <cantidad>25</cantidad>
+    </compra>
+    <compra productRef="2">
+      <cantidad>3</cantidad>
+    </compra>
+  </cliente>
+  <cliente id="2" miembro="regular">
+    <nombre>Luis</nombre>
+    <contacto>
+      <email>luis.porras@gmail.com</email> <!-- Duda porque #PCDATA en el campo email -->
+      <telefono>3242894239</telefono>
+    </contacto>
+    <compra productRef="1">
+      <cantidad></cantidad>
+    </compra>
+    <compra productRef="2">
+      <cantidad>50</cantidad>
+    </compra>
+  </cliente>
+</almacen>

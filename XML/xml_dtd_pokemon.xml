@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pokedex [
+<!ELEMENT pokedex (pokemon+)>
+<!ELEMENT pokemon (nombre, movimientos, tipos+, legendario?)>
+  <!ATTLIST pokemon poke_id ID #REQUIRED>
+  <!ATTLIST pokemon peso CDATA #REQUIRED>
+  <!ATTLIST pokemon gen (primera|segunda|tercera) "primera">
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT movimientos (movimiento)>
+<!ELEMENT movimiento (#PCDATA)>
+  <!ATTLIST movimiento mov_id ID #REQUIRED>
+<!ELEMENT legendario EMPTY>
+<!ENTITY hidro "Hidrobomba">
+]>
+
+<pokedex>
+  <pokemon poke_id="P160" peso="88.8" gen="segunda">
+    <nombre>Feraligtr</nombre>
+    <movimientos>
+      <movimiento mov_id="1">Triturar</movimiento>
+      <movimiento mov_id="2">&hidro;</movimiento>
+      <movimiento mov_id="3">Rayo hielo</movimiento>
+    </movimientos>
+    <tipos>Agua</tipos>
+  </pokemon>
+  <pokemon poke_id="P146" peso="60">
+    <nombre>Moltres</nombre>
+    <movimientos>
+      <movimiento mov_id="1">Presión</movimiento>
+      <movimiento mov_id="2">Cuerpo Llama</movimiento>
+    </movimientos>
+    <tipos>Fuego</tipos>
+    <tipos>Volador</tipos>
+    <legendario/>
+</pokedex>
