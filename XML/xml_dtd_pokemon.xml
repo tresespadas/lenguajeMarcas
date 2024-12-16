@@ -6,7 +6,7 @@
   <!ATTLIST pokemon peso CDATA #REQUIRED>
   <!ATTLIST pokemon gen (primera|segunda|tercera) "primera">
 <!ELEMENT nombre (#PCDATA)>
-<!ELEMENT movimientos (movimiento)>
+<!ELEMENT movimientos (movimiento+)>
 <!ELEMENT movimiento (#PCDATA)>
   <!ATTLIST movimiento mov_id ID #REQUIRED>
 <!ELEMENT legendario EMPTY>
