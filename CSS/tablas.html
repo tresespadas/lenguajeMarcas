@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de tablas en clase</title>
+    <style>
+        a:visited {
+            text-decoration: none;
+            color: rgb(0, 255, 255);
+            font-weight: bolder;
+        }
+        a:link {
+            text-decoration: none;
+            color: rgb(255, 132, 0);
+            font-weight: bold;
+        }
+        a:active { 
+            text-decoration:none;
+            color: red;
+            font-weight: bolder;
+        }
+        a:hover {
+            font-size: 1.2em;
+            text-decoration: none;
+            color: rgb(255, 132, 0);
+            font-weight: bold;
+        }
+        table, tr, th, td {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+        table {
+            margin-top: 50px;
+        }
+        th {
+            background-color: aqua;
+            padding: 10px 40px;
+        }
+        tr:nth-child(even){
+            background-color: red;
+        }
+        tr:nth-child(odd){
+            background-color: rgb(0, 255, 255);
+        }
+        td {
+            text-align: center;
+        }
+        h1 {
+            box-shadow: 6px 20px 10px black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tablas y enlaces</h1>
+   <a href="http://www.google.es" target="_blank">Google</a>
+   <a href="http://www.amazon.es" target="_blank">Amazon</a>
+   <table>
+    <tr>
+        <th>Alumno</th>
+        <th>Curso</th>
+    </tr>
+    <tr>
+        <td>Manuel</td>
+        <td>2º ASIR</td>
+    </tr>
+    <tr>
+        <td>María Lopez</td>
+        <td>1º ASIR</td>
+    </tr>
+    <tr>
+        <td>Adolfo Pérez</td>
+        <td>2º ASIR</td>
+    </tr>
+   </table>
+</body>
+</html>

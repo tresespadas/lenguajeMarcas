@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones</title>
+    <style>
+        h1 { 
+            background-color: red;
+            opacity: 1;
+            transition: backgroun-color 3s;
+        }
+        h1:hover { 
+            background-color: aqua;
+            padding-left: 500px;
+            opacity: 0;
+            transition: opacity 3s;
+        }
+        input {
+            width: 50%;
+            height: 20px;
+            margin-top: 10px;
+        }
+        input[type=submit]{
+            width: 20%;
+            border:1px solid green;
+            border-radius: 5px;
+            background-color: aquamarine;
+        }
+        input[type=submit]:hover {
+            font-weight: bolder;
+        }
+        input[type=checkbox]{
+            accent-color: aquamarine;
+        }
+        textarea {
+            resize: none;
+        }
+        input[id=nombre]{
+            border-color: red;
+        }
+        input:focus, textarea:focus{
+            background-color: bisque;
+        }
+        input:active{
+            background-color: olive;
+        }
+        
+    </style>
+</head>
+<body>
+   <h1>Titulo</h1> 
+   <form action="" method="post">
+   <label for="nombre">Nombre:</label>
+   <input type="text" id="nombre"><br>
+   <label for="apellidos">Apellidos:</label>
+   <input type="text" id="apellidos"><br>
+   <label for="sus">Suscripción:</label>
+   <input type="checkbox" id="sus"><br>
+   <label for="mensaje">Sugerencias:</label>
+   <textarea id="mensaje" name="mensaje"></textarea><br>
+   <input type="submit" value="Enviar">
+   </form>
+</body>
+</html>
