@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Posicionamiento CSS</title>
+  <style>
+    img
+    {
+      width: 300px;
+      height: 200px;
+      float: left;
+    }
+    .abajo
+    {
+      clear:left;
+      position: relative;
+      top: 20px;
+    }
+    a
+    {
+      display: block;
+    }
+    .verde
+    {
+      width: 90px;
+      height: 200px;
+      background-color: green;
+      display: inline;
+      float: right;
+      position: fixed;
+      z-index: 5;
+    }
+    .rojo
+    {
+      width: 80px;
+      height: 200px;
+      background-color: red;
+      display: inline;
+      float: right;
+      position: fixed;
+      z-index: 10;
+    }
+    .amarillo
+    {
+      width: 100px;
+      height: 200px;
+      background-color: yellow;
+      display: inline;
+      float: right;
+      position: fixed;
+      z-index: 0;
+    }
+  </style>
+</head>
+<body>
+  <img src="../../../../Descargas/gato.jpg">
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium maiores atque animi, pariatur voluptatibus reprehenderit quia voluptate, porro molestias incidunt cum. Nesciunt ipsum velit non recusandae animi obcaecati tempore unde.</p>
+  <p class="abajo">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde perspiciatis obcaecati fugit quod voluptates sed nulla, repellat fugiat illum facilis quasi nemo! Est perferendis ut illum rerum, esse quia veritatis!
+  </p>
+  <a href="">Enlace 1</a><a href="">Enlace 2</a><a href="">Enlace 3</a>
+  <div>
+    <div class="rojo"></div>
+    <div class="verde"></div>
+    <div class="amarillo"></div>
+  </div>
+</body>
+</html>
