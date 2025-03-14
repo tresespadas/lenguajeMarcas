@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Simpson - Posicionamiento CSS</title>
+    <style>
+      body
+      {
+        margin: 0;
+        padding: 0;
+      }
+      header
+      {
+        position: fixed;
+        background-color: yellow;
+        width: 100%;  
+        text-align: center;
+        height: 100px;
+        color: grey;
+        top: 0;
+        left: 0;
+        z-index: 10;
+      }
+      nav
+      {
+        position: relative;
+        padding-top: 100px;
+        height: 50px;
+        background-color: rgb(65, 65, 65);
+      }
+      nav ul
+      {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+      }
+      a
+      {
+        text-decoration: none;
+        color: white;
+        padding: 20px;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Los Simpson</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Personajes</a></li>
+            <li><a href="#">Episodios</a></li>
+            <li><a href="#">Curiosidades</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="personajes">
+
+              <div>
+                <img src="galeria/homer.jpeg">
+                <p>Hommer Simpson</p>
+              </div>
+              <div>
+                <img src="galeria/marge.png">
+                <p>Marge Simpson</p>
+              </div>
+              <div>
+                <img src="galeria/bart.png">
+                <p>Bart Simpson</p>
+              </div>
+              <div>
+                <img src="galeria/lisa.png">
+                <p>Lisa Simpson</p>
+              </div>
+              <div>
+                <img src="galeria/maggie.png">
+                <p>Maggie Simpson</p>
+              </div>
+
+
+        </section>
+
+        <aside class="curiosidades">
+            <h2>Curiosidades</h2>
+            <p>📺 *Los Simpson* es la serie animada más longeva de la historia de la TV.</p>
+            <p>🎭 El primer episodio se emitió en 1989.</p>
+            <p>🍩 La rosquilla rosa de Homero se ha convertido en un ícono.</p>
+            <p class="sorpre"><img src="galeria/rosqui.png"></p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Derechos Reservados - 2025</p>
+    </footer>
+
+</body>
+</html>
