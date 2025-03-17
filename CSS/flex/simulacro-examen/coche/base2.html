@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <style>
+        body
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+        header
+        {
+            height:300px;
+            background-image: url(tesla.png);
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding-top: 15px;
+        }
+        nav
+        {
+            background-color: lightgrey;
+            position: relative;
+            height: 30px;
+            padding: 10px;
+        }
+        nav img
+        {
+            position: absolute;
+            left: 20px;
+            top: 1px;
+            max-width: 100%;
+            max-height: 100%;
+            z-index: 10;
+        }
+        nav a
+        {
+            float: right;
+            text-decoration: none;
+            color: grey;
+            padding-left: 10px;
+            padding-right: 10px;
+            line-height: 30px;
+        }
+        nav a:hover
+        {
+            color: #d6273e;
+            font-weight: bold;
+        }
+        .segunda
+        {
+            z-index: 5;
+        }
+        section
+        {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px;
+            justify-content: center;
+        }
+        section article
+        {
+            display: flex;
+            flex-wrap: wrap;
+            width: 45%;
+            border: 1px solid lightgrey;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+        }
+        section article:hover
+        {
+            background-color: darkgrey;
+            border: 2px solid black;
+        }
+        footer
+        {
+            position: relative;
+            bottom: 0;
+            height: 75px;
+            width: 100%;
+            background-color: lightgrey;
+            color: rgb(65,65,65);
+            align-content: center;
+        }
+        footer p
+        {
+            text-align: center;
+        }
+        @media only screen and (max-width: 500px) {
+           body 
+           {
+            font-size: 10px;
+           }
+           header
+           {
+            height: 50px;
+           }
+           section article
+           {
+            margin: 2px;
+            padding: 2px;
+           }
+           footer
+           {
+            position: absolute;
+            bottom: 0;
+           }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Elon Musk</h1>
+        <p>Forjando el mañana</p>
+    </header>
+   
+    <nav>
+        <a href="#">Inicios</a>
+        <a href="#">Historia</a>
+        <a href="#">Galería</a>
+        <a href="#">Desarrollo</a>
+        <a href="#">Futuro</a>
+        <img src="icono.png">
+        <img class="segunda" src="icono2.png">
+    </nav>
+   
+    <section>
+        <article>
+            <h2>Emprendimiento Tecnológico</h2>
+            <p>Musk mostró su destreza en el ámbito tecnológico al cofundar Zip2, una compañía de software que proporcionaba guías empresariales y mapas para periódicos. Sin embargo, fue su visión audaz la que lo llevó más allá de lo convencional. Con la venta de Zip2, financió X.com, que más tarde se fusionaría con Confinity para convertirse en PayPal, revolucionando la forma en que el mundo realiza transacciones electrónicas.</p>
+        </article>
+
+        <article>
+            <h2>Explorando el espacio</h2>
+            <p>Su incansable búsqueda de la innovación lo condujo a fundar SpaceX en 2002, con el objetivo de hacer que la humanidad sea una especie multiplanetaria. El lanzamiento exitoso del Falcon 1 en 2008 marcó un hito en la historia de la exploración espacial privada y consolidó a SpaceX como una potencia en ascenso.</p>
+        </article>
+
+        <article>
+            <h2>Revolucionando la Movilidad</h2>
+            <p>La ambición de Musk abraza el transporte terrestre de alta velocidad. Hyperloop, un concepto de tren de levitación magnética, propone revolucionar los viajes de larga distancia, reduciendo drásticamente los tiempos de viaje. Este proyecto visionario refleja la confianza de Musk en la capacidad de la tecnología para transformar nuestras vidas cotidianas.</p>
+        </article>
+
+        <article>
+            <h2>Más allá de la Tierra</h2>
+            <p>Musk no se detuvo ahí. Tesla Motors, cofundada en 2003, redefine la industria automotriz con vehículos eléctricos de alto rendimiento, desencadenando una revolución en la movilidad sostenible. La visión de Musk va más allá de los autos eléctricos, avanzando en la integración de energía solar y baterías para crear un ecosistema energético sostenible.</p>
+        </article>
+    </section>
+        
+    <footer>
+        <p>&copy; 2023 Nombre de la Web. Todos los derechos reservados.</p>
+    </footer>
+    
+
+</body>
+</html>

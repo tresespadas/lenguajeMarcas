@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Simpson - Posicionamiento CSS</title>
+    <style>
+      
+      body
+      {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      header
+      {
+        height: 100px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: yellow;
+        z-index: 10;
+        text-align: center;
+        color: grey;
+      }
+      nav
+      {
+        position: relative;
+        top: 100px;
+        height: 50px;
+        background-color: rgb(65,65,65);
+        padding: 10px;
+        text-align: center;
+      }
+      nav ul li
+      {
+        list-style-type: none;
+        display: inline;
+      }
+      nav ul li a
+      {
+        text-decoration: none;
+        color: white;
+        padding: 20px;
+      }
+      nav ul li a:hover
+      {
+        color:yellow;
+        font-weight: bold;
+      }
+      main
+      {
+        margin-top: 120px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .personajes
+      {
+        display: flex;
+        flex-wrap: wrap;
+        width: 60%;
+        align-items: baseline;
+        justify-content: space-between;
+        padding: 20px;
+      }
+      .curiosidades
+      {
+        width: 30%;
+        padding-left: 30px;
+      }
+      section div p
+      {
+        position: relative;
+        top: -130px;
+        background-color: grey;
+        border: 2px solid yellow;
+        border-radius: 5px;
+        padding: 10px;
+        text-align: center;
+        color: yellow;
+      }
+      section div:nth-child(4)
+      {
+        order: -1;
+      }
+      footer
+      {
+        position: fixed;
+        bottom: 0;
+        height: 50px;
+        width: 100%;
+        background-color: rgb(65,65,65);
+        text-align: center;
+        color: white;
+      }
+      @media (max-width: 600px)
+      {
+       img 
+       {
+        width: 100px;
+       }
+       nav ul li
+       {
+        display: block;
+       }
+       body
+       {
+        font-size: 13px;
+       }
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Los Simpson</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Personajes</a></li>
+            <li><a href="#">Episodios</a></li>
+            <li><a href="#">Curiosidades</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="personajes">
+
+              <div>
+                <img src="galeria/homer.jpeg">
+                <p>Hommer Simpson</p>
+              </div>
+              <div>
+                <img src="galeria/marge.png">
+                <p>Marge Simpson</p>
+              </div>
+              <div>
+                <img src="galeria/bart.png">
+                <p>Bart Simpson</p>
+              </div>
+              <div>
+                <img src="galeria/lisa.png">
+                <p>Lisa Simpson</p>
+              </div>
+              <div>
+                <img src="galeria/maggie.png">
+                <p>Maggie Simpson</p>
+              </div>
+
+
+        </section>
+
+        <aside class="curiosidades">
+            <h2>Curiosidades</h2>
+            <p>📺 *Los Simpson* es la serie animada más longeva de la historia de la TV.</p>
+            <p>🎭 El primer episodio se emitió en 1989.</p>
+            <p>🍩 La rosquilla rosa de Homero se ha convertido en un ícono.</p>
+            <p class="sorpre"><img src="galeria/rosqui.png"></p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Derechos Reservados - 2025</p>
+    </footer>
+
+</body>
+</html>
