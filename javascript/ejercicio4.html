@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    /* Ejercicio 3
+    num = prompt("Escribe un numero");
+    //let str = "fin";
+    while (num !== "fin" && num !== "FIN") 
+    {
+      if (parseInt(num) % 2 == 0)
+      {
+        alert("Este numero es par");
+      }
+      else
+      {
+        alert("Este numero es impar");
+      }
+      num = prompt("Escribe un numero");
+    }
+    alert("Por fin acabó el bucle");
+    */
+    /* Haz un programa que muestre la tabla de multiplicar del 1 al 10 del número insertado por el usuario */
+    /*
+    let num = parseInt(prompt("Escribe un número"));
+    for (i=0;i<=10;i++)
+    {
+      document.write("<h1>" + num + " x " + i + " = " + num*i + "</h1>");
+    }
+    */
+    /* Haz un programa que dada una palabra por el usuario, cuente el número de vocales */
+    let palabra = prompt("Escribe una palabra:").toLowerCase().normalize("NFD");
+    let count = 0;
+    for (let i=0; i<palabra.length; i++)
+    {
+      if ((palabra.charAt(i) == 'a') || (palabra.charAt(i) == 'e') || (palabra.charAt(i) == 'i') || (palabra.charAt(i) == 'o') || (palabra.charAt(i) == 'u'))
+      {
+       count++; 
+      }
+    }
+    document.write("Hay " + count + " vocales en la palabra " + palabra);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
