@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    table, th, tr, td
+    {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+  </style>
   <script>
     /* Ejercicio 3
     num = prompt("Escribe un numero");
@@ -31,6 +38,7 @@
     }
     */
     /* Haz un programa que dada una palabra por el usuario, cuente el número de vocales */
+    /*
     let palabra = prompt("Escribe una palabra:").toLowerCase().normalize("NFD");
     let count = 0;
     for (let i=0; i<palabra.length; i++)
@@ -41,6 +49,38 @@
       }
     }
     document.write("Hay " + count + " vocales en la palabra " + palabra);
+    */
+    /* Ejercicio 2
+    let num = parseInt(prompt("dame un numero"))
+    let cont = 1;
+    let suma = 0;
+    if (isNaN(num))
+    {
+      alert("Escribe un número, por favor")
+    }
+    else
+    {
+      while (cont <= num)
+      {
+      suma = suma + cont; 
+      cont++;
+      }
+      document.write(suma);
+    }
+    */
+    /* Ejercicio que muestre las tablas de multiplicar */
+    document.write("<table  border=1>")
+    for (j=1;j<=10;j++)
+    {
+      document.write("<tr>")
+      document.write("<th>" + j + "</th>")
+      for (i=1;i<=10;i++)
+      {
+        document.write("<td>" + j + " x " + i + " = " + j*i + "</td>");
+      }
+      document.write("</tr>")
+    }
+    document.write("</table>")
   </script>
 </head>
 <body>
