@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script>
+  let opcion = prompt("A.Suma \nB.Resta \nC.Divide \nD.Salir").toLowerCase();
+  while (opcion != "d")
+  {
+    if (opcion == "a" || opcion == "b" || opcion == "c")
+    {
+      let num1 = parseFloat(prompt("Dime un numero"));
+      let num2 = parseFloat(prompt("Dime otro numero"));
+
+      switch (opcion)
+      {
+        case "a":
+          alert("La suma de " + num1 + " y " + num2 + " es igual a " + (num1+num2));
+          break;
+        case "b":
+          alert("La resta de " + num1 + " y " + num2 + " es igual a " + (num1-num2));
+          break;
+        case "c":
+          if (num2 != 0)
+          {
+            alert("La división de " + num1 + " entre " + num2 + " es igual a " + (num1/num2));
+          }
+          else
+          {
+            alert("No se puede dividir entre cero");
+          }
+          break;
+        default:
+          break;
+      }
+    }
+    else
+    {
+      alert("Error en la opción elegida");
+    }
+    opcion = prompt("A.Suma \nB.Resta \nC.Divide \nD.Salir").toLowerCase();
+  }
+</script>
+<body>
+  
+</body>
+</html>
