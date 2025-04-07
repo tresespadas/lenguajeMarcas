@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    /* Ejercicio 1
+    let puedeAcceder = false;
+    let bach = prompt("¿Tienes titulo de bachiller?").toLowerCase();
+
+    if (bach == "sí" || bach == "si")
+    {
+      puedeAcceder = true;
+    }
+    else
+    {
+      let pruebaAcceso = prompt("¿Has superado un prueba de acceso?").toLowerCase();
+      if (pruebaAcceso == "sí" || pruebaAcceso == "si")
+      {
+        puedeAcceder = true;
+      }
+      else
+      {
+        let gradoMedio = prompt("¿Has superado un grado medio?").toLowerCase();
+        if (gradoMedio == "sí" || gradoMedio == "si")
+        {
+          puedeAcceder = true;
+        }
+      }
+    }
+    alert(puedeAcceder ? "Felicidades, puedes continuar los estudios" : "Lo siento, no puedes acceder a un grado superior");
+    */
+    /* Ejercicio 2
+    let provincia = prompt("¿Cuál es tu provincia de nacimiento?").toLowerCase();
+    let equipo = prompt("¿Cuál es tu equipo de fútbol preferido?").toLowerCase();
+
+    if (provincia == "cádiz" || provincia == "cadiz")
+    {
+      document.write("Olé ahí pishita");
+    }
+    else
+    {
+      document.write("Hola");
+    }
+    if (equipo == "cádiz f.c" || equipo == "cadiz f.c")
+    {
+      document.write("<br>" + "A segunda B");
+    }
+    else
+    {
+      document.write("<br>" + "Muy bien");
+    }
+    */
+    /* Ejercicio 3
+    let vege = prompt("¿Quieres una pizza vegetariana o no?").toLowerCase();
+    let ingrediente;
+
+    if (vege == "sí" || vege == "si")
+    {
+      vege = "vegetariana";
+      ingrediente = prompt("¿Qué ingrediente quieres? Pimiento = P, Tofu = T").toLowerCase();
+
+      if (ingrediente == "p")
+      {
+        ingrediente = "pimiento";
+      }
+      else if (ingrediente == "t")
+      {
+        ingrediente = "tofu";
+      }
+    }
+    else
+    {
+      vege = "no vegetariana";
+      ingrediente = prompt("¿Qué ingrediente quieres? Peperoni = P, Jamon = J, Salmon = S").toLowerCase();
+
+      if (ingrediente == "p")
+      {
+        ingrediente = "peperoni";
+      }
+      else if (ingrediente == "j")
+      {
+        ingrediente = "jamon";
+      }
+      else if (ingrediente == "s")
+      {
+        ingrediente = "salmon";
+      }
+    }
+    alert("La pizza es " + vege + " y tiene mozzarella, tomate y " + ingrediente);
+    */
+    /* Ejercicio 9
+    let num = parseInt(prompt("Escribe un número"));
+
+    for (let i=1; i<=num; i++)
+    {
+      for (let j=i; j>=1; j--)
+        {
+          document.write(j+" ")
+        }
+      document.write("<br>");
+    }
+    */
+    /* Ejercicio Fibonacci */
+    let num = 5;
+    for (let i=1; i<=num; i++)
+    {
+      for (let j=i; j>=1; j--)
+      {
+        if (j>1)
+        {
+          j=1;
+        }
+        document.write((j)+" ");
+      }
+      document.write("<br>")
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
