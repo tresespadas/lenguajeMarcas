@@ -102,22 +102,115 @@
       document.write("<br>");
     }
     */
-    /* Ejercicio Fibonacci */
-    let num = 5;
+    /* Ejercicio 4 
+    let num1 = parseInt(prompt("Dame una longitud"));
+    let num2 = parseInt(prompt("Dame una longitud"));
+    let num3 = parseInt(prompt("Dame una longitud"));
+
+    let triangulo = false;
+
+
+    if (num1 == num2 && num1 == num3)
+    {
+      alert("Es un triángulo equilatero");
+    }
+    else
+    {
+      if (num1 > (num2 + num3))
+      {
+        triangulo = true;
+      }
+      else if (num2 > (num1 + num3))
+      {
+        triangulo = true;
+      }
+      else if (num3 > (num1 + num2))
+      {
+        triangulo = true;
+      }
+      if (triangulo)
+      {
+        if ((num1 == num2 && num1 != num3 ) || (num1 == num3 && num1 != num2))
+        {
+          alert("Es un triángulo isósceles");
+        }
+        else if (num1 != num2 && num1 != num3 && num3 != num2)
+        {
+          alert("Es un triángulo escaleno");
+        }
+        else
+        {
+          alert("Las longitudes no conforman un triángulo");
+        }
+      }
+    }
+    */
+    /* Ejercicio 5
+    let num = parseInt(prompt("Dime un número"));
+
+    for (let i=num; i>=1; i--)
+    {
+      document.write(i + ", ");
+    }
+    document.write("0");
+    */
+    /* Ejercicio 6 
+    let capital = parseFloat(prompt("¿Cuál es el capital de entrada"));
+    let interes = parseInt(prompt("¿Cuál es el interés anual?"));
+    while (interes > 100)
+    {
+      alert("Error sobre el interés anual")
+      interes = parseInt(prompt("¿Cuál es el interés anual?"));
+    }
+    let años = parseInt(prompt("¿Cuántos años durará la inversión?"));
+    for (let i=1; i<=años; i++)
+    {
+      capital = parseFloat(capital * (1 + (interes/100))).toFixed(2);
+    }
+    alert("La inversión final será de " + capital + " al cabo de " + años + " años");
+    */
+    /* Ejercicio 7
+    let num = parseInt(prompt("Dime un número"));
+
     for (let i=1; i<=num; i++)
     {
-      for (let j=i; j>=1; j--)
+      for (let j=i; j>0; j--)
       {
-        if (j>1)
-        {
-          j=1;
-        }
-        document.write((j)+" ");
+        document.write("*");
       }
-      document.write("<br>")
+      document.write("<br>");
     }
+    */ 
+    /* Ejercicio 8 
+    let num = parseInt(prompt("Dime un número"));
+
+    for (i=0; i<10; i++)
+    {
+      document.write(num + " x " + i + " = " + (num*i) + "<br>");
+    }
+    */
+    /* Ejercicio 9
+    let num = parseInt(prompt("Dime un numero"));
+
+    for (i=1; i<=num; i++)
+    {
+      for (j=i; j>0; j--)
+      {
+        document.write(j+" ");
+      }
+      document.write("<br>");
+    }
+    /* Ejercicio 10 
+    let num = parseInt(prompt("Dime un número"));
+    let sum = 0;
+
+    for (i=1; i<=num; i++)
+    {
+      sum = sum + i;
+    }
+    alert(sum);
+    */
   </script>
-</head>
 <body>
   
 </body>

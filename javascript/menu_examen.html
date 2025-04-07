@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let opcion = prompt("A. Cuenta las vocales\n B. Cuenta las palabras \nC. Pasa a mayúsculas\n D. Salir").toLowerCase();
+
+    while (opcion != "d")
+    {
+      if (opcion == "a")
+      {
+        let vocales = 0;
+        let palabra = prompt("Escribe una palabra para conocer el número de vocales").toLowerCase();
+
+        for (i=0; i<palabra.length; i++)
+        {
+          if (palabra.charAt(i) == "a" || palabra.charAt(i) == "e" || palabra.charAt(i) == "i" || palabra.charAt(i) == "o" || palabra.charAt(i) == "u")
+          {
+            vocales++;
+          }
+        }
+        alert("La palabra " + palabra + " tiene " + vocales + " vocales");
+      }
+      else if (opcion == "b") 
+      {
+        let palabras = 1;
+        let frase = prompt("Escribe una frase para conocer cuántas palabras tiene");
+
+
+        for (i=0; i<frase.length; i++)
+        {
+          if (frase.charAt(i) == ' ')
+          {
+            palabras++;
+          }
+        }
+        alert("La frase " + frase + " tiene " + palabras + " palabras");
+      }
+      else if (opcion == "c")
+      {
+        let pregunta = prompt("¿Qué frase quieres en mayúsculas?").toLowerCase();
+
+        let mayus = "";
+
+        for (i=0; i<pregunta.length; i++)
+        {
+          mayus += (pregunta.charAt(i)).toUpperCase();
+        }
+        alert(mayus);
+      }
+      else
+      {
+        alert("Error en la opción elegida");
+      }
+      opcion = prompt("A. Cuenta las vocales\n B. Cuenta las palabras \nC. Pasa a mayúsculas\n D. Salir").toLowerCase();
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
