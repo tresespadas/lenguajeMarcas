@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let numNotas = parseInt(prompt("Dime cuántas notas vas a insertar"));
+    notas = [];
+
+    for (i=0; i<numNotas; i++)
+    {
+      let nota = parseFloat(prompt("Insertar la nota"));
+      notas.push(nota);
+    }
+    let maxNota = notas[0];
+    for (i=0; i<notas.length; i++)
+    {
+      if (notas[i] > maxNota)
+      {
+        maxNota = notas[i];
+      }
+    }
+    let minNota = notas[0];
+    for (i=0; i<notas.length; i++)
+    {
+      if (notas[i] < minNota)
+      {
+        minNota = notas[i];
+      }
+    }
+    let total = 0;
+    for (i=0; i<notas.length; i++)
+    {
+      total += notas[i];
+    }
+    let media = total/notas.length;
+    document.write("La nota máxima es "+maxNota+"<br>");
+    document.write("La nota mínima es "+minNota+"<br>");
+    document.write("La media de notas es "+media+"<br>");
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
