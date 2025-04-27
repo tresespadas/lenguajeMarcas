@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokédex</title>
+  <script>
+
+    function mayusPrimera(str)
+    {
+      return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+    }
+
+    function insertarPokemon()
+    {
+      let nomPokemon = prompt("¿Cuál es el nombre del Pokémon que quieres insertar?");
+      let tipoPokemon = prompt("¿Cuál es el tipo del Pokémon que quieres insertar?");
+      let vidaPokemon = parseInt(prompt("¿Cuántos puntos de vida tiene el Pokémon que quieres insertar?"));
+      let ataquePokemon = parseInt(prompt("¿Cuántos puntos de ataque tiene el Pokémon que quieres insertar?"));
+      pokedex.push([mayusPrimera(nomPokemon),mayusPrimera(tipoPokemon),vidaPokemon,ataquePokemon]);
+    }
+
+    function buscarPokemon(nomPokemon)
+    {
+      for (let i in pokedex)
+      {
+        if (pokedex[i][0] == nomPokemon)
+        {
+          return i;
+        }
+      }
+      return false;
+    }
+
+    function listarPokemon()
+    {
+      for (let i in pokedex)
+      {
+        alert("El Pokemon "+pokedex[i][0]+" es de tipo "+pokedex[i][1]+", tiene "+pokedex[i][2]+" puntos de vida y "+pokedex[i][3]+" puntos de ataque.");
+      }
+    }
+
+    function contarTipo(tipoPokemon)
+    {
+      let cont = 0;
+      for (let i in pokedex)
+      {
+        if (pokedex[i][1] == tipoPokemon)
+        {
+          cont++;
+        }
+      }
+      if (cont == 0)
+      {
+        alert("No hay Pokemons de ese tipo")
+      }
+      else
+      {
+        alert(cont);
+      }
+    }
+     
+    function contarTotal()
+    {
+      let cont = 0;
+      for (let i in pokedex)
+      {
+        cont++;
+      }
+      alert("Hay un total de "+cont+" Pokemons registrados en la pokedex");
+    }
+
+    function puntosVidaPokemon(nomPokemon)
+    {
+      for (let i in pokedex)
+      {
+        if (pokedex[i][0] == nomPokemon)
+        {
+          return pokedex[i][2];
+        }
+      }
+    }
+
+    function puntosAtaquePokemon(nomPokemon)
+    {
+      for (let i in pokedex)
+      {
+        if (pokedex[i][0] == nomPokemon)
+        {
+          return pokedex[i][3];
+        }
+      }
+    }
+
+    function luchaPokemon(pokeA,pokeB)
+    {
+      let ataquesPokeA = Math.round(puntosVidaPokemon(pokeB)/puntosAtaquePokemon(pokeA));
+      let ataquesPokeB = Math.round(puntosVidaPokemon(pokeA)/puntosAtaquePokemon(pokeB));
+
+      if (ataquesPokeA <= ataquesPokeB) // Suponiendo que nuestro Pokemon ataque primero
+      {
+        alert(pokeA+" vencerá a "+pokeB+" en "+ataquesPokeA+" ataque(s)");
+      }
+      else
+      {
+        alert(pokeB+" vencerá a "+pokeA+" en "+ataquesPokeB+" ataque(s)");
+      }
+    }
+
+    let pokedex = [['Squirtle','Agua',60,50],['Charmander','Fuego',50,40],['Bulbasur','Planta',40,70]];
+    let bucle = true;
+
+    while (bucle)
+    {
+      let menu = prompt("A. Insertar Pokemon\nB. Información Pokemon\nC. Listar todos los Pokemon\nD. Contar tipo\nE. Contar total\nF. Luchar\nG. Salir").toLowerCase();
+
+      switch (menu)
+      {
+        case "a": // TODO: Control de errores en los datos
+          insertarPokemon();
+          break;
+        case "b": 
+          let nomPokemon = mayusPrimera(prompt("¿Qué Pokemon quieres buscar?"));
+          let busqueda = buscarPokemon(nomPokemon);
+          if (busqueda)
+          {
+            alert("El Pokemon "+pokedex[busqueda][0]+" es de tipo "+pokedex[busqueda][1]+", tiene "+pokedex[busqueda][2]+" puntos de vida y "+pokedex[busqueda][3]+" puntos de ataque.");
+          }
+          else
+          {
+            alert(nomPokemon+" no se encuentra registrado en la pokedex");
+          }
+          break;
+        case "c":
+          listarPokemon();
+          break;
+        case "d":
+          let tipoPokemon = prompt("¿Cuál es el tipo del Pokémon que quieres buscar?");
+          contarTipo(mayusPrimera(tipoPokemon));
+          break;
+        case "e":
+          contarTotal();
+          break;
+        case "f":
+          let pokeA = mayusPrimera(prompt("¿Con cuál Pokemon quieres luchar?"));
+          let pokeB = mayusPrimera(prompt("¿Contra cuál Pokemon quieres luchar?"));
+          while (!buscarPokemon(pokeA))
+          {
+            alert(pokeA+" no está registrado en la pokedex");
+            pokeA = mayusPrimera(prompt("¿Con cuál Pokemon quieres luchar?"));
+          }
+          while (!buscarPokemon(pokeB))
+          {
+            alert(pokeA+" no está registrado en la pokedex");
+            pokeA = mayusPrimera(prompt("¿Con cuál Pokemon quieres luchar?"));
+          }
+          luchaPokemon(pokeA,pokeB);
+          break;
+        case "g":
+          bucle = false;
+          break;
+      }
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
