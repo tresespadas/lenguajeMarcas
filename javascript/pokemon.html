@@ -34,10 +34,12 @@
 
     function listarPokemon()
     {
+      let texto = "";
       for (let i in pokedex)
       {
-        alert("El Pokemon "+pokedex[i][0]+" es de tipo "+pokedex[i][1]+", tiene "+pokedex[i][2]+" puntos de vida y "+pokedex[i][3]+" puntos de ataque.");
+        texto += "El Pokemon "+pokedex[i][0]+" es de tipo "+pokedex[i][1]+", tiene "+pokedex[i][2]+" puntos de vida y "+pokedex[i][3]+" puntos de ataque."+"\n";
       }
+      alert(texto);
     }
 
     function contarTipo(tipoPokemon)
@@ -62,12 +64,7 @@
      
     function contarTotal()
     {
-      let cont = 0;
-      for (let i in pokedex)
-      {
-        cont++;
-      }
-      alert("Hay un total de "+cont+" Pokemons registrados en la pokedex");
+      alert("Hay un total de "+pokedex.length+" Pokemons registrados en la pokedex");
     }
 
     function puntosVidaPokemon(nomPokemon)
@@ -94,8 +91,8 @@
 
     function luchaPokemon(pokeA,pokeB)
     {
-      let ataquesPokeA = Math.round(puntosVidaPokemon(pokeB)/puntosAtaquePokemon(pokeA));
-      let ataquesPokeB = Math.round(puntosVidaPokemon(pokeA)/puntosAtaquePokemon(pokeB));
+      let ataquesPokeA = Math.ceil(puntosVidaPokemon(pokeB)/puntosAtaquePokemon(pokeA)); // Redonde al siguiente entero
+      let ataquesPokeB = Math.ceil(puntosVidaPokemon(pokeA)/puntosAtaquePokemon(pokeB));
 
       if (ataquesPokeA <= ataquesPokeB) // Suponiendo que nuestro Pokemon ataque primero
       {
@@ -158,6 +155,9 @@
           break;
         case "g":
           bucle = false;
+          break;
+        default:
+          alert("Opción incorrecta");
           break;
       }
     }
