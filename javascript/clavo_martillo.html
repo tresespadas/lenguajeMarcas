@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examen JS - Reparaciones Clavo y Martillo</title>
+  <script>
+    function mayusPrimera(str)
+    {
+      return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+    }
+
+    function sueldoNeto(empleado)
+    {
+      switch(empleado[3])      
+      {
+        case 0:
+          return empleado[2];
+          break;
+        case 1:
+          return empleado[2] - 200;
+          break;
+        case 2:
+          return empleado[2] - 225;
+          break;
+        case 3:
+          return empleado[2] - 350;
+          break;
+        case 4:
+          return empleado[2] - 375;
+          break;
+        default: // Si tienes más de 4
+          return empleado[2] - 375;
+          break;
+      }
+    }
+
+    function totalSueldos()
+    {
+      let total = 0;
+      for (let i in empleados)
+      {
+        total += empleados[i][2];
+      }
+      return total * 12;
+    }
+
+    function mayorEmpleado()
+    {
+      let max_index = 0;
+      let max_sueldo = sueldoNeto(empleados[0]);
+      for (let i in empleados)
+      {
+        if (max_sueldo < sueldoNeto(empleados[i]))
+        {
+          max_index = i;
+        }
+      }
+      return empleados[max_index][0];
+    }
+
+    function mayorSueldo()
+    {
+      let max_sueldo = sueldoNeto(empleados[0]);
+      for (let i in empleados)
+      {
+        if (max_sueldo < sueldoNeto(empleados[i]))
+        {
+          max_sueldo = sueldoNeto(empleados[i]);
+        }
+      }
+      return max_sueldo;
+    }
+
+    function buscarEmpleado(nomEmpleado)
+    {
+      for (let i in empleados)
+      {
+        if (empleados[i][0] == nomEmpleado)
+        {
+          return empleados[i];
+        }
+      }
+      return false;
+    }
+
+    function fueraBornos()
+    {
+      let cont = 0;
+      for (let i in empleados)
+      {
+        if (empleados[i][1] != "Bornos")
+        {
+          cont++;
+        }
+      }
+      return cont;
+    }
+
+    function listaEmpleados()
+    {
+      let texto = "";
+      for (let i in empleados)
+    {
+      texto += "Nombre:"+empleados[i][0]+"- sueldo: "+empleados[i][2]+" - localidad: "+empleados[i][1]+" - hijos: "+empleados[i][3]+"<br>";
+    }
+    return texto;
+    }
+
+    let numEmpleados = parseInt(prompt("¿Cuántos empleados componen la empresa"));
+    let empleados = [];
+    for (let i=1; i<=numEmpleados; i++)
+    {
+      let nomEmpleado = mayusPrimera(prompt("¿Cómo se llama el empleado número "+i+"?"));
+      let pobEmpleado = mayusPrimera(prompt("¿Dónde reside el empleado número "+i+"?"));
+      let sueldoBrutoEmpleado = parseInt(prompt("¿Cuál es el sueldo bruto del empleado número "+i+"?"));
+      let numHijosEmpleado = parseInt(parseInt(prompt("¿Cuántos hijos tiene el empleado número "+i+"?")));
+      empleados.push([nomEmpleado,pobEmpleado,sueldoBrutoEmpleado,numHijosEmpleado]);
+    }
+
+    document.write("A) El total de gasto de la empresa en sueldos de empleados  es: "+totalSueldos()+"<br>");
+    document.write("B) El empleado que más cobra es "+mayorEmpleado()+" que cobra mensualmente "+mayorSueldo()+"€ <br>");
+    let posibleEmpleado = mayusPrimera(prompt("¿Sobre qué empleado quieres información?"));
+    if (!buscarEmpleado(posibleEmpleado))
+    {
+      alert("El nombre de empleado introducido no existe en el sistema");
+    }
+    else
+    {
+      document.write("C) El sueldo del trabajador "+posibleEmpleado+" es de "+sueldoNeto(buscarEmpleado(posibleEmpleado))+" € netos al mes <br>");
+    }
+    document.write("D) El número de empleados que viven fuera de Bornos es: "+fueraBornos()+"<br>");
+    document.write("DATOS DE LOS TRABAJADORES <br>");
+    document.write(listaEmpleados());
+    document.write("<br> Reparaciones Clavo y Martillo");
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
