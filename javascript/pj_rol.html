@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examen de recuperación JS - Personajes de rol</title>
+  <script>
+
+    function mayusPrimera(str)
+    {
+      return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+    }
+
+    function insertarPj()
+    {
+      let nomPersonaje = prompt("¿Cómo se llama el personaje que quieres insertar?");
+      let clasePersonaje = prompt("¿Cuál es la clase del personaje que quieres insertar?");
+      let nivelPersonaje = parseInt(prompt("¿Cuál es el nivel del personaje que quieres insertar?"));
+      let razaPersonaje = prompt("¿Qué raza es el personaje que quieres insertar?");
+
+      personajes.push([mayusPrimera(nomPersonaje),mayusPrimera(clasePersonaje),nivelPersonaje,mayusPrimera(razaPersonaje)]);
+    }
+
+    function mostrarPj(str)
+    {
+      for (let i in personajes)
+      {
+        if (personajes[i][0] == str)
+        {
+          return alert("El personaje "+personajes[i][0]+" es de clase "+personajes[i][1]+" tiene nivel "+personajes[i][2]+ " y es de raza "+personajes[i][3]);
+        }
+      }
+      return alert("El personaje "+personajes[i][0]+" no se encuentra registrado");
+    }
+
+    function mostrarTodosPj()
+    {
+      let texto = "";
+      for (i in personajes)
+      {
+        texto += "El personaje "+personajes[i][0]+" es de clase "+personajes[i][1]+" tiene nivel "+personajes[i][2]+ " y es de raza "+personajes[i][3]+"\n";
+      }
+      alert(texto);
+    }
+
+    function contarPj()
+    {
+      let epico = 0;
+      for (let i in personajes)
+      {
+        if (personajes[i][2] > 10)
+        {
+          epico++;
+        }
+      }
+      return epico;
+    }
+
+    let personajes = [["Gandalf","Mago",10,"Humano"],["Aragorn","Guerrero",12,"Enano"],["Legolas","Arquero",11,"Elfo"]];
+
+    let bucle = true;
+
+    while (bucle)
+    {
+      let menu = prompt("A. Insertar nuevo personaje\nB. Mostrar datos de personaje\nC. Mostrar la guía\nD. Contar personajes ÉPICOS\nE. Salir\nElige una opción").toLowerCase();
+
+      switch (menu)
+      {
+        case "a":
+          insertarPj();
+          break;
+        case "b":
+          let nomPersonaje = mayusPrimera(prompt("¿Cómo se llama el personaje que quieres buscar?"));
+          mostrarPj(nomPersonaje);
+          break;
+        case "c":
+          mostrarTodosPj();
+          break;
+        case "d":
+          alert("Actualmente, se encuentran registrados "+contarPj()+" personajes épicos");
+          break;
+        case "e":
+          bucle = false;
+          break;
+        default:
+          alert("Opción inválida");
+          break;
+      }
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
