@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examen de los compañeros</title>
+  <script>
+    function mayusPrimera(texto)
+    {
+      return texto.charAt(0).toUpperCase() + texto.slice(1).toLowerCase();
+    }
+
+    function insertarTarea()
+    {
+      let nomTarea = prompt("¿Nombre tarea?");
+      let tipoTarea = prompt("¿Tipo tarea?");
+      let durTarea = parseInt(prompt("¿Nombre tarea?"));
+      tareas.push([mayusPrimera(nomTarea),mayusPrimera(tipoTarea),durTarea]);
+    }
+
+    function cuenta(arr)
+    {
+      total = 0;
+      for (let i in arr)
+      {
+        total += arr[i];
+      }
+      return total;
+    }
+
+
+    let tareas = [["Repasar tema","Estudios",30],["Ejercicios fuerza","Personal",40],["Hacer esquesma","Estudios",20]];
+
+    let bucle = true;
+    while (bucle)
+    {
+      let menu = prompt("A. Insertar tema\nB. Tareas de un tipo\nC. Contar tareas de un tipo\nD. Mostrar tareas largas\nE. Tiempo por tipo\nF. Salir\nElige una opción").toLowerCase();
+      switch(menu)
+      {
+        case "a":
+          insertarTarea();
+          break;
+        case "b":
+          break;
+        case "c":
+          break;
+        case "d":
+          break;
+        case "e":
+          let arr = [];
+          let tipoTarea = mayusPrimera(prompt("¿Tipo tarea?"));
+          for (let i in tareas)
+          {
+            if (tareas[i][1] == tipoTarea)
+            {
+              arr.push(tareas[i][2]);
+            }
+          }
+          alert(tipoTarea+"="+cuenta(arr));
+          break;
+        case "f":
+          bucle = false;
+          break;
+        default:
+          alert("Opción inválida");
+          break;
+      }
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
