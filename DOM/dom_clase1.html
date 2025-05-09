@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explicación 1 de DOM en clase</title>
+  <style>
+    .roja 
+    {
+      color: red; 
+      font-size: 14px;
+    }
+    .verde 
+    {
+      color: green; 
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="color: blue;" id="titulo">Hola</h1>
+  <p class="roja">Un párrafo</p>
+  <p class="roja">Otro párrafo</p>
+  <a href="http://www.google.es" id="enlace">No pinches aquí</a>
+  <script>
+    // Acceso a un elemento con id
+    let mi_h1 = document.getElementById("titulo");
+    let nombre = prompt("¿Dime tu nombre?");
+    mi_h1.innerHTML = mi_h1.innerHTML + " " + nombre;
+
+    // Acceso a un elemento sin id
+    let parrafos = document.getElementsByTagName("p");
+    for (let i in parrafos)
+    {
+      parrafos[i].innerHTML = parrafos[i].innerHTML + " de " + nombre;
+    }
+
+    // Cambio de un atributo
+    let mi_enlace = document.getElementById("enlace");
+    mi_enlace.href = "http://www.elmundo.es";
+
+    // Cambio de un estilo
+    mi_h1.style = "color:red";
+
+  // Cambio de una clase
+  parrafos[0].className = "verde";
+  </script>
+</body>
+</html>
