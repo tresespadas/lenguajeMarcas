@@ -16,9 +16,16 @@
       font-size: 24px;
     }
   </style>
+  <script>
+    function cambiarEstilo(elemento)
+    {
+      // Cambio de un estilo
+      elemento.style = "color:red";
+    }
+  </script>
 </head>
 <body>
-  <h1 style="color: blue;" id="titulo">Hola</h1>
+  <h1 style="color: blue;" id="titulo" onclick="cambiarEstilo(this)">Hola</h1>
   <p class="roja">Un párrafo</p>
   <p class="roja">Otro párrafo</p>
   <a href="http://www.google.es" id="enlace">No pinches aquí</a>
@@ -39,8 +46,6 @@
     let mi_enlace = document.getElementById("enlace");
     mi_enlace.href = "http://www.elmundo.es";
 
-    // Cambio de un estilo
-    mi_h1.style = "color:red";
 
   // Cambio de una clase
   parrafos[0].className = "verde";
