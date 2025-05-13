@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio de clase 2 de DOM</title>
+</head>
+<body>
+  <h1>Bienvenido</h1>
+  <script>
+    // INSERCIÓN DE ELEMENTOS CON DOM
+    // Insertamos un párrado
+    let numParrafos = parseInt(prompt("Dime cuántos párrafos quieres insertar"));
+    for (let i=0;i<numParrafos;i++)
+    {
+      let nodo = document.createElement("p");
+      let texto = prompt("Dime el contenido del párrafo"+i);
+      let contenido = document.createTextNode(texto);
+
+      nodo.appendChild(contenido);
+      document.body.appendChild(nodo);
+    }
+
+    let nodoLista = document.createElement("ul")
+    let numLista = parseInt(prompt("Dime el tamaño de la lista"))
+    for (let i=0;i<numLista;i++)
+    {
+      let nodoHijoLista = document.createElement("li")
+      let contenido = document.createTextNode("Elemento1");
+
+      nodoHijoLista.appendChild(contenido);
+      nodoLista.appendChild(nodoHijoLista);
+      document.body.append(nodoLista);
+    }
+  </script>
+</body>
+</html>
