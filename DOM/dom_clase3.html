@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase de DOM 3</title>
+  <script>
+    function borrarParrafoNum(evento)
+    {
+      let num = evento.key
+      let parrafos = document.getElementsByTagName("p");
+
+      if (num<=0 || num>parrafos.length)
+      {
+        alert("Ese número de párrafo no existe")
+      }
+      else
+      {
+        parrafos[num-1].parentNode.removeChild(parrafos[num-1]);
+      }
+
+    }
+    function borrarParrafo(evento)
+    {
+      if (evento.key == "k" || evento.key == "K")
+      {
+        let num = parseInt(prompt("¿Qué párrafo quieres borrar?"));
+        let parrafos = document.getElementsByTagName("p");
+
+        if (num<=0 || num>parrafos.length)
+        {
+          alert("Ese número de párrafo no existe")
+        }
+        else
+        {
+          parrafos[num-1].parentNode.removeChild(parrafos[num-1]);
+        }
+      }
+    }
+  </script>
+</head>
+<body onkeypress="borrarParrafoNum(event)">
+  <p>párrafo 1</p>
+  <p>párrafo 2</p>
+  <p>párrafo 3</p>
+  <p>párrafo 4</p>
+  <p>párrafo 5</p>
+  <p>párrafo 6</p>
+  <div>
+    <p>párrafo distinto</p>
+  </div>
+
+    <!-- 
+    parrafos[0].parentNode.removeChild(parrafos[0]) // CUIDADO QUE NO BORRA EL PRIMER HIJO - DEBE ESTAR EN EL ARRAY DE parrafos
+    -->
+  </script>
+</body>
+</html>
