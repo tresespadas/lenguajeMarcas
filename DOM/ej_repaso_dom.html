@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios de repaso de DOM</title>
+  <script>
+    function crearH2(evento)
+    {
+      if (evento.key == "T" || evento.key == "t")
+      {
+        let nodo = document.createElement("h2");
+        let palabra = prompt("¿Qué quieres incluir en el h2?");
+        let contenido = document.createTextNode(palabra);
+        
+        nodo.appendChild(contenido);
+        document.body.appendChild(nodo);
+      }
+    }
+
+    function borrarParrafo(opcion)
+    {
+      let numParrafo = opcion.value;
+      //alert(numParrafo);
+      let parrafos = document.getElementsByTagName("p");
+      if (numParrafo > parrafos.length)
+      {
+        alert("El párrafo seleccionado no existe");
+      }
+      else
+      {
+        parrafos[numParrafo-1].parentNode.removeChild(parrafos[numParrafo-1]);
+      }
+    }
+
+    function cambiarParrafo(palabra, num)
+    {
+      //alert(palabra.value);
+      //alert(num.value);
+      let parrafos = document.getElementsByTagName("p");
+      parrafos[num.value-1].textContent = palabra.value; // TAMBIÉN VALE .innerHTML
+    }
+  </script>
+</head>
+<body onkeypress="crearH2(event)">
+  <h1>Hola, esto es un h1</h1>
+  <p>Hola, esto es el párrafo 1</p>
+  <p>Hola, esto es el párrafo 2</p>
+  <p>Hola, esto es el párrafo 3</p>
+  <p>Hola, esto es el párrafo 4</p>
+  <p>Hola, esto es el párrafo 5</p>
+  <p>Hola, esto es el párrafo 6</p>
+  <script>
+      let parrafos = document.getElementsByTagName("p");
+      let numparrafos = parrafos.length;
+      alert(numparrafos);
+  </script>
+  <form action="" method="post">
+      <label name="opcion" for="opcion">Número de párrafos</label>
+      <select name="opcion" for="opcion" id="opcion">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+      <input type="button" onclick="borrarParrafo(document.getElementById('opcion'))" value="Borrar párrafo"><br>
+      <br>Inserta la palabra nueva: <input type="text" id="palabranueva"/>
+      <br>Inserta el número del párrafo: <input type="text" id="numeroparrafo"/>
+      <br><input type="button" onclick="cambiarParrafo(document.getElementById('palabranueva'), document.getElementById('numeroparrafo'))" value="Cambiar párrafo">
+  </form>
+</body>
+</html>
