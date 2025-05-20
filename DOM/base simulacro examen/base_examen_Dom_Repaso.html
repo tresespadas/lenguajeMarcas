@@ -18,6 +18,7 @@
         let divDebajo = document.getElementById("contenido");
         divDebajo.textContent = arrFilas.length;
       }
+
       function cambiarImagen(evento)
       {
         if (evento.key == "K" || evento.key == "k")
@@ -26,9 +27,9 @@
           arrImagen[0].src = "logo_guadal.png";
         }
       }
+
       function anadeParrafo()
       {
-        // Falta por definir el parámetro de entrada
         let arrDiv = document.getElementsByTagName("div");
         let nodoNuevo = document.createElement("p");
         let contenidoNuevo = document.getElementById("contenidoInsertar").value;
@@ -36,7 +37,21 @@
         
         nodoNuevo.appendChild(contenido);
         arrDiv[2].appendChild(nodoNuevo);
+
+        // Solucionar el que sólo cree una
       }
+
+      function cambiarLetra(colorLetra, tamanoLetra)
+      {
+        let arrParrafos = document.getElementsByTagName("p");
+
+        for (let i=0; i<arrParrafos.length; i++)
+        {
+          arrParrafos[i].style.color = colorLetra;
+          arrParrafos[i].style.fontSize = tamanoLetra+"px"; //MADRE MÍA LO QUE HE TARDADO EN EL PX
+        }
+      }
+
     </script>
   </head>
   <body onkeypress="cambiarImagen(event)">
@@ -70,6 +85,7 @@
       Es, pues, de saber que este sobredicho hidalgo, los ratos que estaba ocioso —que eran los más del año—, se daba a leer libros de caballerías, con tanta afición y gusto, que olvidó casi de todo punto el ejercicio de la caza y aun la administración de su hacienda; y llegó a tanto su curiosidad y desatino en esto, que vendió muchas hanegas de tierra de sembradura para comprar libros de caballerías en queIV leer, y, así, llevó a su casa todos cuantos pudo haber dellos; y, de todos, ningunos le parecían tan bienV como los que compuso el famoso Feliciano de Silva, porque la claridad de su prosa y aquellas entricadas razones suyas le parecían de perlas, y más cuando llegaba a leer aquellos requiebros y cartas de desafíos, donde en muchas partes hallaba escrito: «La razón de la sinrazón que a mi razón se hace, de tal manera mi razón enflaquece, que con razón me quejo de la vuestra fermosura». Y también cuando leía: «Los altos cielos que de vuestra divinidad divinamente con las estrellas os fortifican y os hacen merecedora del merecimiento que merece la vuestra grandeza...»</p>
       
     </div>
+
     <div>
       <form action="" method="post">
         <label for="contenidoInsertar">Contenido a insertar:</label>
@@ -78,5 +94,19 @@
         <input type="button" onclick="anadeParrafo()" value="Añadir párrafo">
       </form>
     </div>
+
+    <div>
+      <form action="" method="post">
+        <label for="colorLetra">Color de letra: </label>
+        <input type="color" id="colorLetra" name="colorLetra">
+        <br>
+        <label for="tamanoLetra">Tamaño de letra: </label>
+        <input type="text" id="tamanoLetra" name="tamanoLetra">
+        <br>
+        <input type="button" onclick="cambiarLetra(document.getElementById('colorLetra').value, document.getElementById('tamanoLetra').value)" value="Cambiar apariencia">
+        
+      </form>
+    </div>
+
   </body>
 </html>
