@@ -11,9 +11,9 @@
                   background-color: bisque;}
     </style>
     <script>
-      function numFilasDiv()
+      function numFilasDiv(elemento)
       {
-        let arrFilas = document.getElementsByTagName("tr");
+        let arrFilas = elemento.getElementsByTagName("tr");
         //alert(arrFilas.length);
         let divDebajo = document.getElementById("contenido");
         divDebajo.textContent = arrFilas.length;
@@ -38,6 +38,7 @@
         nodoNuevo.appendChild(contenido);
         arrDiv[2].appendChild(nodoNuevo);
 
+        document.getElementsByName("botonA")[0].disabled = true;
         // Solucionar el que sólo cree una
       }
 
@@ -55,7 +56,7 @@
     </script>
   </head>
   <body onkeypress="cambiarImagen(event)">
-    <table onmouseenter="numFilasDiv()">
+    <table onmouseenter="numFilasDiv(this)">
       <tr>
         <th>Nombre</th>
         <th>Edad</th>
@@ -91,7 +92,7 @@
         <label for="contenidoInsertar">Contenido a insertar:</label>
         <input type="text" id="contenidoInsertar" name="contenidoInsertar">
         <br>
-        <input type="button" onclick="anadeParrafo()" value="Añadir párrafo">
+        <input name="botonA" type="button" onclick="anadeParrafo()" value="Añadir párrafo">
       </form>
     </div>
 
