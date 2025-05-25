@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios DOM con formularios</title>
+  <script>
+    function calcularConversion()
+    {
+      let euros = parseFloat(document.getElementById("euros").value);
+      let dolares = parseFloat(document.getElementById("dolares").value);
+
+      if (isNaN(euros))
+      {
+        document.getElementById("euros").value = dolares / 2;
+      }
+      else 
+      {
+        document.getElementById("dolares").value = euros * 2;
+      }
+    }
+  </script>
+</head>
+<body>
+  <div>
+    <form action="" method="post">
+      <label for="euros">Euros: </label>
+      <input type="number" id="euros" name="euros" value="euros">
+      <br>
+      <label for="dolares">Dolares: </label>
+      <input type="number" id="dolares" name="dolares" value="dolares">
+      <br>
+      <input type="button" value="Calcular" onclick=calcularConversion()> 
+    </form> 
+  </div>
+
+    <br>
+
+  <div>
+    <form action="" method="post">
+      <label for="nomCliente">Nombre del cliente:</label>
+      <br>
+      <input type="text" id="nomCliente" name="nomCliente">
+      <br>
+      <label for="matCaja">Material de la caja:</label>
+      <br>
+      <select name="matCaja" id="matCaja" name="matCaja">
+        <option value="Plástico">Plástico</option>
+        <option value="Cartón">Cartón</option>
+        <option value="Sin caja">Sin caja</option>
+      </select>
+
+      <br>
+
+      <label for="dimCaja">Seleccione unas dimensiones para la caja:</label>
+      <input type="radio" id="pequena" name="dimCaja">
+    </form>
+  </div>
+
+</body>
+</html>

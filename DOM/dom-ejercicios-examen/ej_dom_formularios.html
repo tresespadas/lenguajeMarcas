@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios DOM con formularios - Moodle</title>
+  <script>
+    function calcularConversion()
+    {
+      let euros = parseFloat(document.getElementById("euros").value);
+      let dolares = parseFloat(document.getElementById("dolares").value);
+
+      if (isNaN(euros))
+      {
+        document.getElementById("euros").value = dolares / 2;
+      }
+      else if (isNaN(dolares))
+      {
+        document.getElementById("dolares").value = euros * 2;
+      }
+    }
+
+    function borrarContenido()
+    {
+      let eurosObj = document.getElementById("euros");
+      let dolaresObj = document.getElementById("dolares");
+      eurosObj.value = "";
+      dolaresObj.value = "";
+    }
+
+    let p_insertado = false;
+
+    function mostrarCaract()
+    {
+      if (!p_insertado)
+      {
+        let nomCliente = document.getElementsByName("nomCliente")[0]
+        let matCaja = document.getElementById("matcaja");
+        let dimCaja = document.getElementsByName("dimCaja");
+        let comentario = document.getElementsByTagName("textarea")[0].value;
+
+        let tamano = "";
+        for (let i=0; i<dimCaja.length; i++)
+        {
+          if (dimCaja[i].checked)
+          {
+            tamano = dimCaja[i].value;
+          }
+        }
+
+        let nodoNuevo = document.createElement("p");
+        let text = nomCliente.value+" ha pedido una caja de "+matCaja.value+" con unas dimensiones "+tamano+". "+comentario;
+        let contenido = document.createTextNode(text);
+
+        nodoNuevo.appendChild(contenido);
+        document.body.appendChild(nodoNuevo);
+
+        p_insertado = true;
+      }
+    }
+
+    let num = Math.ceil(Math.random() * 5);
+    function adivinarNum()
+    {
+      let inputs = document.querySelectorAll('input[type="text"]');
+      let userInputElement = inputs[inputs.length-2];
+      let lastInputElement = inputs[inputs.length - 1];
+      
+      let intentos = 3;
+      while(intentos > 0)
+      {
+        let userInput = parseInt(userInputElement.value);
+        if (isNaN(userInput))
+        {
+          lastInputElement.value = "No es numero";
+          break;
+        }
+
+        if (userInput == num)
+        {
+          lastInputElement.value = "Acierto";
+          break;
+        }
+        else
+        {
+          lastInputElement.value = "Fallo";
+          intentos--;
+        }
+
+      }
+    }
+
+    function calculateCost()
+    {
+      let numNoches = parseInt(document.getElementById("numNoches").value);
+      let costeHotel_Obj = document.getElementsByName("costeHotel");
+      let costeHotel = parseInt(costeHotel_Obj[0].value);
+
+      let costeViaje_Obj = document.getElementsByName("costeViaje");
+      let costeViaje = parseInt(costeViaje_Obj[0].value);
+
+
+      let costeCoche_Obj = document.getElementsByName("costeCoche");
+      let costeCoche = parseInt(costeCoche_Obj[0].value);
+
+      let costeTotal = document.getElementsByName("costeTotal")
+      costeTotal[0].value = (costeCoche+costeHotel+costeViaje);
+    }
+
+  </script>
+</head>
+<body>
+  <div>
+    <form action="" method="post">
+      <label for="euros">Euros:</label>
+      <input type="text" name="euros" id="euros"><br>
+      <label for="dolares">Dolares:</label>
+      <input type="text" name="dolares" id="dolares"><br>
+      <input type="button" value="Calcular" onclick="calcularConversion()">
+      <input type="button" value="Borrar" onclick="borrarContenido()">
+    </form>
+  </div>
+
+  <br>
+
+  <div>
+    <form action="" method="post">
+      <label for="nomCliente">Nombre del cliente:</label><br>
+      <input type="text" name="nomCliente">
+      <br>
+      <label for="matcaja">Material de la caja:</label><br>
+      <select name="matcaja" id="matcaja">
+        <option value="plastico">Plástico</option>
+        <option value="cartón">Cartón</option>
+        <option value="sin caja">Sin caja</option>
+      </select>
+    </form>
+
+    <br>
+
+    <div>
+      <p>Seleccione unas dimensiones para la caja:</p>
+      <input type="radio" name="dimCaja" id="diminuta" value="diminuta"><label for="diminuta">Diminutas</label>
+      <br><input type="radio" name="dimCaja" id="medianas" value="medianas"><label for="medianas">Medianas</label>
+      <br><input type="radio" name="dimCaja" id="grandes" value="grandes"><label for="grandes">Grandes</label>
+    </div>
+
+    <br>
+
+    <textarea name="comentarios" id="comentarios" placeholder="Inserta aquí si quieres un comentario"></textarea>
+    <br>
+    <input type="button" value="Enviar" onclick="mostrarCaract()">
+  </div>
+
+  <br>
+
+  <form action="" method="post">
+    <input type="text" id="numUsuario">
+    <br><input type="button" value="Evaluar" onclick="adivinarNum()">
+    <br><input type="text" id="resultado">
+  </form>
+
+<br>
+<br>
+
+<form action="" method="post">
+  <label for="numNoches">Introduzca el número de noches:</label>
+  <input type="text" name="numNoches" id="numNoches">
+  <select name="ciudad" id="ciudad">
+    <option value="oviedo">Oviedo</option>
+    <option value="oviedo">Oviedo</option>
+    <option value="oviedo">Oviedo</option>
+    <option value="oviedo">Oviedo</option>
+  </select>
+  <input type="button" value="Calcular coste" onclick="calculateCost()">
+  <br>
+  <br>
+  <label for="costeHotel">Coste hotel:</label>
+  <input type="text" name="costeHotel">
+
+  <br>
+
+  <label for="costeViaje">Coste viaje:</label> &nbsp;
+  <input type="text" name="costeViaje">
+
+  <br>
+
+  <label for="costeCoche">Coste coche:</label> &nbsp;
+  <input type="text" name="costeCoche">
+
+  <br>
+
+  <label for="costeTotal">Coste total:</label> &nbsp;
+  <input type="text" name="costeTotal" readonly>
+</form>
+  
+</body>
+</html>

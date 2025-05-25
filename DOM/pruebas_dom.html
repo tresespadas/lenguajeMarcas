@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pruebas manipulando DOM</title>
+  <script>
+    function eliminarDiv()
+    {
+      let arrDiv = document.getElementsByClassName("old-div");
+      arrDiv[0].parentNode.removeChild(arrDiv[0]);
+
+      document.getElementById("botonEliminar").disabled = true;
+    }
+  </script>
+</head>
+<body>
+  <h1 id="title">ManipulanDOM</h1>
+  <div class="main-div">
+    Imagen de ejemplo: <br> 
+    <img src="base simulacro examen/logo_guadal.png" alt="logo">
+  </div>
+  <div class="old-div">
+    Este div se eliminará
+  </div>
+  <div>
+    <form action="" method="post">
+      <input type="button" id="botonEliminar" value="Eliminar div" onclick="eliminarDiv()">
+    </form>
+  </div>
+  <ul class="list">
+    <li>Javascript</li>
+    <li>PHP</li>
+    <li>Python</li>
+    <li>Ruby</li>
+    <li>Java</li>
+  </ul>
+  <script>
+    let titulo = document.getElementById("title");
+    console.log(titulo);
+
+    let mainDiv1 = document.querySelector(".main-div");
+    console.log(mainDiv1);
+    
+    let mainDiv2 = document.getElementsByClassName("main-div")
+    console.log(mainDiv2);
+
+    titulo.innerText = "Soy un h1";
+
+    let img = document.getElementsByTagName('img');
+    img[0].src = "base simulacro examen/gato.jpeg";
+  </script>
+</body>
+</html>

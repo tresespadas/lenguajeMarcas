@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Repaso total de DOM y formularios</title>
+  <script>
+    function borrarEstructura(param)
+    {
+      // param = h1, h2, div, ul, form...
+      let elementos = document.getElementsByTagName(param);
+      // Borra el primero
+      elementos[0].parentNode.removeChild(elementos[0]);
+
+      let numElemento = document.getElementsByTagName(param).length;
+
+      if (numElemento == 0)
+      {
+        let seleccion = document.getElementById('seleccionEstructura')
+        for (let i=0; i<seleccion.length; i++)
+        {
+          if (seleccion[i].value == param)
+          {
+            seleccion.remove(i);
+            break;
+          }
+        }
+      }
+    }
+
+    function insertarEstructura(param)
+    {
+      let nodoNuevo = document.createElement(param);
+      let texto = prompt("¿Qué quieres incluir en el "+param+"?");
+      let contenido = document.createTextNode(texto);
+      
+      nodoNuevo.appendChild(contenido);
+      document.body.appendChild(nodoNuevo);
+    }
+  </script>
+</head>
+<body>
+  <!-- NO TOCAR ESTE HTML -->
+  <h1 id="main-title">Welcome to My DOM Playground</h1>
+  <h2 class="subtitle">Subheading: Explore the DOM</h2>
+
+  <div id="content">
+    <p class="text">This is a paragraph inside a div.</p>
+    <p class="text">Another paragraph with the same class.</p>
+  </div>
+
+  <div class="box" data-type="info">
+    <p>This is a box with a data attribute.</p>
+  </div>
+
+  <ul id="item-list">
+    <li class="item">Item 1</li>
+    <li class="item">Item 2</li>
+    <li class="item">Item 3</li>
+  </ul>
+
+  <form id="login-form">
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username" />
+    
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" />
+    
+    <button type="submit">Login</button>
+  </form>
+
+  <div>
+    <img src="../../../Imágenes/urano.jpeg" alt="Sample Image" id="sample-img">
+  </div>
+
+  <div class="footer">
+    <p>Footer content © 2025</p>
+  </div> 
+
+  <!-- HTML PROPIO PARA MODIFICAR EL DE ARRIBA -->
+   <div>
+    <form action="" method="post">
+      <label for="seleccionEstructura" for="seleccionEstructura">Selecciona la estructura que quieres borrar:</label> 
+      <select name="seleccionEstructura" id="seleccionEstructura">
+        <option value="h1">h1</option>
+        <option value="h2">h2</option>
+        <option value="div">div</option>
+        <option value="ul">ul</option>
+        <option value="form">form</option>
+      </select>
+      <br>
+      <input type="button" onclick="borrarEstructura(document.getElementById('seleccionEstructura').value)" name="butonBorrar" value="Borrar estructura">
+
+      <br>
+
+      <label for="seleccionEstructura_2" for="seleccionEstructura_2">Selecciona la estructura que quieres insertar:</label> 
+      <select name="seleccionEstructura_2" id="seleccionEstructura_2">
+        <option value="h1">h1</option>
+        <option value="h2">h2</option>
+        <option value="div">div</option>
+        <option value="ul">ul</option>
+        <option value="form">form</option>
+      </select>
+      <br>
+      <input type="button" onclick="insertarEstructura(document.getElementById('seleccionEstructura_2').value)" name="butonInsertar" value="Insertar estructura">
+    </form>
+   </div>
+
+
+</body>
+</html>
