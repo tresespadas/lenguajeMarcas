@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pruebas DOM</title>
+  <script>
+    function addParrafo()
+    {
+      let arrParrafo = document.getElementsByTagName("p");
+      let texto = prompt("Inserta un contenido para el nuevo párrafo");
+      let nodoNuevo = document.createElement("p");
+      let contenidoNuevo = document.createTextNode(texto);
+
+      nodoNuevo.appendChild(contenidoNuevo);
+      // Forma típica de insertar
+      //document.body.appendChild(nodoNuevo);
+
+      // Lo añade antes del que tu quieras
+      //document.body.insertBefore(nodoNuevo, arrParrafo[arrParrafo.length - 1]);
+
+      // Lo añade al final del último
+      arrParrafo[arrParrafo.length - 1].after(nodoNuevo);
+    }
+
+    function removeParrafo()
+    {
+      let arrParrafo = document.getElementsByTagName("p");
+      arrParrafo[0].parentNode.removeChild(arrParrafo[arrParrafo.length - 1]);
+    }
+
+    function buscarColor(colorActual, colores)
+    {
+      if (colorActual == 'grey')
+      {
+        return -1;  
+      }
+
+      for (let i=0; i<colores.length; i++)
+      {
+        if (colores[i] == colorActual)
+        {
+          return i;
+        }
+      }
+      return -1;
+    }
+
+    function cambiaFondo()
+    {
+      let colorActual = document.body.style.backgroundColor;
+      let colores = ["red","blue","yellow","green","grey"];
+      let colorPosicionNuevo = buscarColor(colorActual,colores);
+      document.body.style.backgroundColor = colores[colorPosicionNuevo + 1];
+    }
+
+    function jumpscare(evento)
+    {
+      if (evento.key == "c" || evento.key == "C")
+      {
+        let nodoNuevo = document.createElement("img");
+        nodoNuevo.src = "saturno.jpeg";
+        document.body.appendChild(nodoNuevo);
+      }
+    }
+  </script>
+</head>
+<body style="background-color: red;" onkeydown="jumpscare(event)">
+  <p>Párrafo 1</p>
+  <p>Párrafo 2</p>
+  <p>Párrafo 3</p>
+  <p>Párrafo 4</p>
+  <input type="button" value="Añade un párrafo" onclick="addParrafo()">
+  <br>
+  <input type="button" value="Elimina un párrafo" onclick="removeParrafo()">
+
+  <br>
+
+  <label>
+    <input type="radio" name="radio-ex" value="1">
+    Opción 1
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="radio-ex" value="2">
+    Opción 2
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="radio-ex" value="3">
+    Opción 3
+  </label>
+  <br>
+
+  <form action="" method="post">
+    <input type="button" value="Cambia el fondo" onclick="cambiaFondo()">
+  </form>
+</body>
+</html>
